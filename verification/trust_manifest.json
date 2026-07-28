@@ -1,0 +1,1638 @@
+{
+  "claims": [
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2, page 275, for the ten-point bound, Theorem 1(ii), page 275, for equality classification, and Theorem 3, page 278, for the stabilizer",
+            "Dye 1991, Theorem 2, pages 276--278, for the unique associated polarity"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "classical equality, polarity, and stabilizer identification",
+          "unconditional_remainder": "The line bound and chord-defect deduction are proved in the manuscript."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound",
+                "RelativeConicArcs.ClebschDye.dye1991_equality_classification"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
+              "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card",
+              "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic",
+              "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "symmetry-free rigidity implication"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_rigidity_degenerate_conic.py",
+                "repository": "paper",
+                "sha256": "c0f9e1021068f7f25cdfa89f05aab765a8cce060658072bca5c2d61b6b3e6895"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_rigidity_degenerate_conic.py"
+                ]
+              }
+            ],
+            "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay checks the explicit Clebsch witness and normalized class census."
+          },
+          "route": "exact-replay",
+          "subclaim": "finite witness and orbit census"
+        }
+      ],
+      "id": "rigidity-headline",
+      "paper_location": "source line 74",
+      "route": "mixed",
+      "row": 2,
+      "source": {
+        "id": "rigidity-headline",
+        "kind": "verbatim",
+        "sha256": "0f0c13c15894c5f98a5813ac99be6f94148cc87e0129b13847a57b1f6c3a959b"
+      },
+      "trust_boundary": "Lean proves the conic-containment implication through the explicit Dye axiom seam; the associated polarity and stabilizer identification remain cited classical consequences."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "classical group identification",
+          "unconditional_remainder": "The displayed matrices and their finite action are checked exactly."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.brianchon_points_one_orbit": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.point_orbit_partition": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_six_orbit": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_twelve_orbit": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.point_orbit_partition",
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_six_orbit",
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_twelve_orbit",
+              "RelativeConicArcs.Examples.Q11A5PointOrbits.brianchon_points_one_orbit"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "explicit finite point orbits"
+        }
+      ],
+      "id": "prop-a5-point-orbits",
+      "paper_location": "source line 385",
+      "route": "mixed",
+      "row": 11,
+      "source": {
+        "id": "prop:a5-point-orbits",
+        "kind": "theorem-environment",
+        "sha256": "b55e4af0607168f516b0305837cf0f59a895cd4360802630524c76b99304e2db"
+      },
+      "trust_boundary": "The gate checks the explicit order-sixty action and its point-orbit partition; its identification with the classical A5 action uses Dye."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278",
+            "Davydov--Marcugini--Pambianco 2021, Theorem 6.3",
+            "Hirschfeld 1998, the plane arc/covering-radius dictionary"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "Brianchon count, chord exteriority, and code--arc dictionary",
+          "unconditional_remainder": "The manuscript routes the count through row 24 and proves conic equality directly from the exteriority of all fifteen chords."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.witness_mds_columns": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.Examples.Q11Coding.witness_mds_columns",
+              "RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic",
+              "RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "witness MDS code and projective distance-three locus"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_rigidity_degenerate_conic.py",
+                "repository": "paper",
+                "sha256": "c0f9e1021068f7f25cdfa89f05aab765a8cce060658072bca5c2d61b6b3e6895"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_rigidity_degenerate_conic.py"
+                ]
+              }
+            ],
+            "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay verifies the displayed Clebsch class and uncovered conic."
+          },
+          "route": "exact-replay",
+          "subclaim": "independent coordinate witness"
+        }
+      ],
+      "id": "prop-deep-holes-conic",
+      "paper_location": "source line 452",
+      "route": "mixed",
+      "row": 12,
+      "source": {
+        "id": "prop:deep-holes-conic",
+        "kind": "theorem-environment",
+        "sha256": "5fb600094c48e7dc65ea98d8ca215de2b2ea89a0109f5ae6760508a99396092d"
+      },
+      "trust_boundary": "The manuscript obtains the twelve-point count from Dye's Brianchon value and the universal defect formula, then identifies the conic by chord exteriority; Lean and the exhaustive replay check the displayed witness independently."
+    },
+    {
+      "cited_inputs": [
+        "Davydov--Marcugini--Pambianco 2021, Theorem 6.3",
+        "Hirschfeld 1998, the plane arc/covering-radius dictionary"
+      ],
+      "id": "cor-named-variety",
+      "paper_location": "source line 469",
+      "route": "conceptual-cited-inputs",
+      "row": 13,
+      "source": {
+        "id": "cor:named-variety",
+        "kind": "theorem-environment",
+        "sha256": "27a3d716a1d4fbaf91368282fee98dfe3a467f200df794326b1cd4c4f34af042"
+      },
+      "trust_boundary": "This is a conceptual dictionary and exact counting corollary; it does not inherit a formalization label from adjacent rows.",
+      "unconditional_remainder": "The manuscript gives the exact projectivization and coset counts."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "deep-hole orbit deduction",
+          "unconditional_remainder": "The manuscript transports the twelve-point action through the code--arc dictionary."
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_code_automorphisms.py",
+                "repository": "paper",
+                "sha256": "82b0c9fd1e64f7c9950cd951450c7c85b8f752c08645a33cdcd5520e8163a3fb"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_code_automorphisms.py"
+                ]
+              }
+            ],
+            "coverage": "Over F_11, the checker tests all 6! coordinate permutations and constructs the complete projective and monomial automorphism actions of the displayed six-column code.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay checks the displayed monomial automorphisms and syndrome action."
+          },
+          "route": "exact-replay",
+          "subclaim": "code automorphism action"
+        }
+      ],
+      "id": "prop-deep-hole-orbit",
+      "paper_location": "source line 508",
+      "route": "mixed",
+      "row": 14,
+      "source": {
+        "id": "prop:deep-hole-orbit",
+        "kind": "theorem-environment",
+        "sha256": "4c3b29e65f0adc104aee737b7d0e7cfce57b39bc520f62c28ef85fa13aa42961"
+      },
+      "trust_boundary": "The projective action argument is in the manuscript; the executable route checks the displayed automorphism action exactly."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Davydov--Marcugini--Pambianco 2021, Theorem 6.3",
+            "Hirschfeld 1998, the plane arc/covering-radius dictionary"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "syndrome-oracle reduction",
+          "unconditional_remainder": "The manuscript proves the quadratic decision rule from the code--arc dictionary."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact",
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound",
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts",
+              "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree",
+              "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "decoder and ambiguity strata"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_decoding.py",
+                "repository": "paper",
+                "sha256": "d0b2fa749e0025e9db43dd0433768d4c49a1681283675af25aeca1dd8c2c0cd8"
+              },
+              {
+                "path": "check_chirality.py",
+                "repository": "paper",
+                "sha256": "200cbd604c7e9aa942d1e3b54c372b97c69b8ebcb42220e710d1141131f9cca5"
+              },
+              {
+                "path": "check_code_automorphisms.py",
+                "repository": "paper",
+                "sha256": "82b0c9fd1e64f7c9950cd951450c7c85b8f752c08645a33cdcd5520e8163a3fb"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_decoding.py"
+                ]
+              },
+              {
+                "argv": [
+                  "python3",
+                  "check_chirality.py"
+                ]
+              },
+              {
+                "argv": [
+                  "python3",
+                  "check_code_automorphisms.py"
+                ]
+              }
+            ],
+            "coverage": "Over F_11, the three checkers enumerate every projective syndrome direction, every minimum-weight leader support, all displayed Brianchon/support strata, and the complete projective and monomial automorphism actions; no sampling is used.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay checks distances, leader multiplicities, and ambiguity supports; the imported support and automorphism modules are hash-pinned alongside it."
+          },
+          "route": "exact-replay",
+          "subclaim": "independent decoder census"
+        }
+      ],
+      "id": "prop-decoding-oracle",
+      "paper_location": "source line 560",
+      "route": "mixed",
+      "row": 15,
+      "source": {
+        "id": "prop:decoding-oracle",
+        "kind": "theorem-environment",
+        "sha256": "5aa733b14d96af0204113be8d682f36b1fb06db6f1fee5065dda39da89b182b4"
+      },
+      "trust_boundary": "Lean checks the exact syndrome branches and leader-support strata; the separate replay independently exhausts every projective syndrome direction."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "No external input; complete combinatorial proof in the manuscript"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "six-arc line bound",
+          "unconditional_remainder": "The line bound is unconditional."
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_rigidity_degenerate_conic.py",
+                "repository": "paper",
+                "sha256": "c0f9e1021068f7f25cdfa89f05aab765a8cce060658072bca5c2d61b6b3e6895"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_rigidity_degenerate_conic.py"
+                ]
+              }
+            ],
+            "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay enumerates every frame-normalized six-arc and filters the arcs contained in a nonsingular conic."
+          },
+          "route": "exact-replay",
+          "subclaim": "conic-inscribed subcensus"
+        }
+      ],
+      "id": "lem-six-arc-line-bound",
+      "paper_location": "source line 636",
+      "route": "mixed",
+      "row": 16,
+      "source": {
+        "id": "lem:six-arc-line-bound",
+        "kind": "theorem-environment",
+        "sha256": "94320face4dcbdf85e4c61f5941df4dd99532ad671f120e2c7d3a614da5d90be"
+      },
+      "trust_boundary": "The line bound is a complete human combinatorial proof; the displayed conic-inscribed values are backed by the exact normalized census."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "degenerate-conic reduction and Dye equality boundary",
+          "unconditional_remainder": "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, and proves the chord-defect identity independently."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound",
+                "RelativeConicArcs.ClebschDye.dye1991_equality_classification"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound",
+                "RelativeConicArcs.ClebschDye.dye1991_brianchon_bound"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
+              "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card",
+              "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic",
+              "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "nonsingular-conic rigidity implication"
+        }
+      ],
+      "id": "thm-rigidity",
+      "paper_location": "source line 121",
+      "route": "mixed",
+      "row": 17,
+      "source": {
+        "id": "thm:rigidity",
+        "kind": "theorem-environment",
+        "sha256": "49282b0388745dbd71076010b8e0db376255306a903eb723e76f174285266f69"
+      },
+      "trust_boundary": "The manuscript handles degenerate conics by the proved line bound; Lean checks the nonsingular-conic implication relative to Dye's two declared consequences."
+    },
+    {
+      "computation": {
+        "artifacts": [
+          {
+            "path": "check_low_degree_loci.py",
+            "repository": "paper",
+            "sha256": "fab65df95dac888758f28fae19cf1d2ce47ee2a170b73fea5a6cba61ccae16fc"
+          },
+          {
+            "path": "check_global_conic_gap.py",
+            "repository": "paper",
+            "sha256": "4a17c22801df0700ef77772613fc6fb41bcc566f13e06b72431b977a43e110fe"
+          }
+        ],
+        "checker_commands": [
+          {
+            "argv": [
+              "python3",
+              "check_low_degree_loci.py"
+            ]
+          },
+          {
+            "argv": [
+              "python3",
+              "check_global_conic_gap.py"
+            ]
+          }
+        ],
+        "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+        "independent_replay": "The low-degree checker deliberately reuses the global checker's canonical class generator so both tables have identical keys; there is no second independent enumeration of the fifteen classes. Both programs reconstruct all coordinates and are independent of Lean.",
+        "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+        "soundness_bridge": "The replay evaluates homogeneous forms degree by degree on every uncovered locus; its imported canonical-class generator is hash-pinned alongside it."
+      },
+      "id": "prop-low-degree-rigidity",
+      "paper_location": "source line 196",
+      "route": "exact-replay",
+      "row": 18,
+      "source": {
+        "id": "prop:low-degree-rigidity",
+        "kind": "theorem-environment",
+        "sha256": "11c7c9029cb3fd9111dfe68a465e69490da1195ee5cea6c04ead9420796e582b"
+      },
+      "trust_boundary": "The statement is backed by complete exact evaluation-rank enumeration, not by a Lean theorem."
+    },
+    {
+      "cited_inputs": [
+        "Davydov--Marcugini--Pambianco 2021, Theorem 6.3",
+        "Hirschfeld 1998, the plane arc/covering-radius dictionary"
+      ],
+      "id": "cor-monomial-characterization",
+      "paper_location": "source line 221",
+      "route": "conceptual-cited-inputs",
+      "row": 19,
+      "source": {
+        "id": "cor:monomial-characterization",
+        "kind": "theorem-environment",
+        "sha256": "fcb21f7559ca31605008b8b55ae418ff5b0e5d29fe92646e9ebe7947c3ccb6fb"
+      },
+      "trust_boundary": "This is a conceptual corollary of the code--arc dictionary and the preceding replay-backed proposition.",
+      "unconditional_remainder": "The manuscript reduces monomial code equivalence to projective equivalence and invokes row 18."
+    },
+    {
+      "computation": {
+        "artifacts": [
+          {
+            "path": "check_global_conic_gap.py",
+            "repository": "paper",
+            "sha256": "4a17c22801df0700ef77772613fc6fb41bcc566f13e06b72431b977a43e110fe"
+          }
+        ],
+        "checker_commands": [
+          {
+            "argv": [
+              "python3",
+              "check_global_conic_gap.py"
+            ]
+          }
+        ],
+        "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+        "independent_replay": "The global, one-point-neighbour, and automorphism programs use separate finite enumerations and compare invariant counts; none imports Lean output.",
+        "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+        "soundness_bridge": "The script exhausts the normalized six-arcs and regenerates the displayed uncovered-locus values."
+      },
+      "id": "thm-gap",
+      "paper_location": "source line 253",
+      "route": "exact-replay",
+      "row": 20,
+      "source": {
+        "id": "thm:gap",
+        "kind": "theorem-environment",
+        "sha256": "c11a7fa262929336dc9123b35a669cae91360dd3baa3b0a8cd8e72b1623962d5"
+      },
+      "trust_boundary": "The numerical gap is exact-replay-backed; the qualitative rigidity implication remains separately routed in row 17."
+    },
+    {
+      "cited_inputs": [
+        "Edge 1956, Sections 29--32",
+        "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+      ],
+      "id": "prop-brianchon-support",
+      "paper_location": "source line 795",
+      "route": "conceptual-cited-inputs",
+      "row": 21,
+      "source": {
+        "id": "prop:brianchon-support",
+        "kind": "theorem-environment",
+        "sha256": "d7b0fe5c351928bfea000c685822de9b16ce30022c2f904d4c900011ba8da591"
+      },
+      "trust_boundary": "The incidence dictionary is a human consequence of the cited Edge--Dye geometry.",
+      "unconditional_remainder": "The manuscript identifies the support sets through the displayed incidence configuration."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Edge 1956, Sections 29--32",
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "decoder reconstruction",
+          "unconditional_remainder": "The reconstruction follows from the preceding dictionary."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact",
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound",
+              "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts",
+              "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree",
+              "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "Brianchon leader supports"
+        }
+      ],
+      "id": "cor-decoder-brianchon",
+      "paper_location": "source line 845",
+      "route": "mixed",
+      "row": 22,
+      "source": {
+        "id": "cor:decoder-brianchon",
+        "kind": "theorem-environment",
+        "sha256": "c1ea61b02bd14425b18655fee79a57d9b654ecdf8f6715e77071105f55b75fbe"
+      },
+      "trust_boundary": "The manuscript gives the conceptual corollary; Lean checks the exact Brianchon leader-support rows for the displayed witness."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Edge 1956, Sections 29--32",
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "intrinsic support bipartition",
+          "unconditional_remainder": "The manuscript proves invariance without choosing an orientation."
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_chirality.py",
+                "repository": "paper",
+                "sha256": "200cbd604c7e9aa942d1e3b54c372b97c69b8ebcb42220e710d1141131f9cca5"
+              },
+              {
+                "path": "check_code_automorphisms.py",
+                "repository": "paper",
+                "sha256": "82b0c9fd1e64f7c9950cd951450c7c85b8f752c08645a33cdcd5520e8163a3fb"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_chirality.py"
+                ]
+              },
+              {
+                "argv": [
+                  "python3",
+                  "check_code_automorphisms.py"
+                ]
+              }
+            ],
+            "coverage": "Over F_11, the two checkers enumerate every ambiguity support and its orbit under the complete displayed projective and monomial automorphism actions; no sampling is used.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The scripts exhaust the ambiguity supports and displayed code automorphisms."
+          },
+          "route": "exact-replay",
+          "subclaim": "support and automorphism replay"
+        }
+      ],
+      "id": "prop-invariant-support-bipartition",
+      "paper_location": "source line 861",
+      "route": "mixed",
+      "row": 23,
+      "source": {
+        "id": "prop:invariant-support-bipartition",
+        "kind": "theorem-environment",
+        "sha256": "f534538de1f14366d6b1e78599ee85520590e9c17123f46e3dec2182e550a3c6"
+      },
+      "trust_boundary": "The unordered support bipartition is proved by incidence and independently replayed; no orientation or sign is claimed."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Complete double count in the manuscript; the standard even-order oval nucleus is cited from Hirschfeld",
+            "Blokhuis--Brouwer--Szonyi 2010, Proposition 1.5, for the partial-cover bound with noncollinear holes"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "universal secant moments and conic-filling window",
+          "unconditional_remainder": "The identity, defect bound, quadratic barrier, even-order oval obstruction, and lower field-size bound are proved for every k in the manuscript; the stronger upper bound is deduced from the cited partial-cover theorem."
+        },
+        {
+          "cited_inputs": [
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "Clebsch q=11 specialization",
+          "unconditional_remainder": "Only the displayed Clebsch specialization uses Dye's ten Brianchon points; it is not asserted for an arbitrary six-arc."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
+              "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "six-arc chord-defect algebra and geometric bridge"
+        },
+        {
+          "cited_inputs": [
+            "Brouwer--Cohen--Neumaier 1989, Section 13.1.2, for the Sylvester graph interpretation",
+            "Abiad--Jabal Ameli--Reijnders 2025, Table 1, for the distance-two clique number five; independently formalized from the explicit finite model"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "Sylvester graph and distance-two interpretation",
+          "unconditional_remainder": "The explicit distance-two clique certificate is kernel checked."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
+              "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "Sylvester distance-two clique obstruction"
+        }
+      ],
+      "id": "lem-chord-defect+cor-conic-filling-window+lem-q9-polarity",
+      "paper_location": "source line 78",
+      "route": "mixed",
+      "row": 24,
+      "source": {
+        "id": "lem:chord-defect+cor:conic-filling-window+lem:q9-polarity",
+        "kind": "theorem-environment",
+        "sha256": "6eea9df631a67dd530f5965d9cbc2724d04cf7aae7144b54787c07f0da45bbdf"
+      },
+      "trust_boundary": "The manuscript proves the universal chord-defect identity, quadratic barrier, even-order oval obstruction, and passant window and applies the cited partial-cover theorem; Lean checks the six-arc specialization and an explicit Sylvester distance-two clique certificate."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Brouwer--Cohen--Neumaier 1989, Section 13.1.2, for the Sylvester graph interpretation",
+            "Abiad--Jabal Ameli--Reijnders 2025, Table 1, for the distance-two clique number five; independently formalized from the explicit finite model",
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "Sylvester graph interpretation and q=11 rigidity dependency",
+          "unconditional_remainder": "The chord arithmetic and explicit finite graph certificate are kernel checked; the manuscript invokes row 17 only for the final q=11 orbit classification."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
+              "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "field-order boundary"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_small_q_uniqueness.py",
+                "repository": "paper",
+                "sha256": "cbe028cec3795edb8e2985c4f5aba6fb268260e6ea5183122cb1d040abb2ec01"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_small_q_uniqueness.py"
+                ]
+              }
+            ],
+            "coverage": "For every prime power q <= 14, the checker enumerates every frame-normalized embedded six-arc, computes its full uncovered locus, and tests equality with every nonsingular conic.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay checks every stated small-field Clebsch specialization."
+          },
+          "route": "exact-replay",
+          "subclaim": "small-field boundary"
+        }
+      ],
+      "id": "thm-why11",
+      "paper_location": "source line 325",
+      "route": "mixed",
+      "row": 25,
+      "source": {
+        "id": "thm:why11",
+        "kind": "theorem-environment",
+        "sha256": "ee9d60d4e40d522a2d97db84ab658c92aa67802be8eb1a4be556d55a30d17933"
+      },
+      "trust_boundary": "Lean checks the chord formulas and an explicit Sylvester-graph clique certificate; the q=11 classification inherits Dye's rigidity boundary."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Dye 1991, Theorem 1, pages 275--276, and the edge criterion in the discussion preceding Theorem 6, pages 281--282"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "Clebsch-family chord count and associated-conic inclusion",
+          "unconditional_remainder": "The manuscript derives the polynomial from the ten-Brianchon equality and uses Dye's edge criterion for the associated-conic inclusion."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula": [
+                "propext"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "uncovered-locus polynomial"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_q19_nonexample.py",
+                "repository": "paper",
+                "sha256": "70afb02e4c4b90ada37f2d8a7515afe019830a255f8d04fe5ad44ce68c449213"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_q19_nonexample.py"
+                ]
+              }
+            ],
+            "coverage": "Over F_19, the checker constructs the displayed order-60 icosahedral action and its six-axis arc, then enumerates all 381 projective points and all fifteen secants to compute the complete uncovered locus.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The replay independently constructs and checks the q=19 specialization."
+          },
+          "route": "exact-replay",
+          "subclaim": "q=19 specialization"
+        }
+      ],
+      "id": "prop-clebsch-family-uncovered",
+      "paper_location": "source line 911",
+      "route": "mixed",
+      "row": 26,
+      "source": {
+        "id": "prop:clebsch-family-uncovered",
+        "kind": "theorem-environment",
+        "sha256": "4c80b78f56a7acb84cafc60cbbd7b2995489098be1c2304ddad496e25ebed5dc"
+      },
+      "trust_boundary": "The all-field formula is conceptual; q=19 is checked by an independent exact specialization."
+    },
+    {
+      "components": [
+        {
+          "cited_inputs": [
+            "Brouwer--Cohen--Neumaier 1989, Section 13.1.2, for the Sylvester graph interpretation",
+            "Abiad--Jabal Ameli--Reijnders 2025, Table 1, for the distance-two clique number five; independently formalized from the explicit finite model",
+            "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278",
+            "Blokhuis--Brouwer--Szonyi 2010, Proposition 1.5, for the partial-cover bound with noncollinear holes"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "small-arc reductions, k=6 dependency, and k=8 field sieve",
+          "unconditional_remainder": "The manuscript derives the moment equations, applies the partial-cover window, and proves the q=13 passant-saturation reduction; only the k=6 branch invokes rows 25 and 17."
+        },
+        {
+          "cited_inputs": [
+            "Davydov--Marcugini--Pambianco 2021, Theorem 6.3",
+            "Hirschfeld 1998, the plane arc/covering-radius dictionary"
+          ],
+          "route": "conceptual-cited-inputs",
+          "subclaim": "projective MDS translation",
+          "unconditional_remainder": "The length-at-most-eight code classification is the preceding arc classification transported through the standard projective parity-check-column and distance-three syndrome dictionary."
+        },
+        {
+          "lean": {
+            "audit": {
+              "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
+              "repository": "lean",
+              "sha256": "ef031beeb322b7bd217651aec0b1822b231a01991c1652e21e048bc9f5305767"
+            },
+            "axioms": {
+              "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ]
+            },
+            "gate": {
+              "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "repository": "lean",
+              "sha256": "dce51b42bfb384950bbffa756a87c3aabccfda03502d19545988f52aca32cb69"
+            },
+            "terminals": [
+              "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card",
+              "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order",
+              "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card",
+              "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra"
+            ],
+            "validation": {
+              "command": "scripts/guarded-lean RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+              "toolchain": {
+                "lean": "4.32.0-rc1",
+                "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+              }
+            }
+          },
+          "route": "kernel-checked-lean",
+          "subclaim": "four-, five-, and seven-arc moment consequences"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "check_small_k_conic_filling.py",
+                "repository": "paper",
+                "sha256": "9d8991c583b0dc9fcc972e6560e41b163d06836cffa6f029dd80d2b5a1c94379"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "check_small_k_conic_filling.py"
+                ]
+              }
+            ],
+            "coverage": "The checker verifies the displayed q=5 four-frame and exhausts all frame-normalized seven-arcs obtained from the 1,548 normalized six-arcs over F_11 and 4,015 over F_13; multiplicity-three deduplication reaches 10,232 and 53,960 distinct seven-arcs, respectively.",
+            "independent_replay": "The replay reconstructs its domain from explicit coordinates and does not import Lean output.",
+            "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+            "soundness_bridge": "The checker exhausts the displayed fields and arc sizes through k=7 after the moment reduction; it is not evidence for an eight-arc classification."
+          },
+          "route": "exact-replay",
+          "subclaim": "terminal exclusions through seven points"
+        },
+        {
+          "computation": {
+            "artifacts": [
+              {
+                "path": "verification/conic_filling_verify.py",
+                "repository": "paper",
+                "sha256": "dd0f100223e7acea076a5a823ca57c0635f14ba400308a6c2f84f44df910d529"
+              }
+            ],
+            "checker_commands": [
+              {
+                "argv": [
+                  "python3",
+                  "verification/conic_filling_verify.py"
+                ]
+              }
+            ],
+            "coverage": "For q=13,17,19 the primary search fixes XZ=Y^2, partitions all 7,098, 20,808, and 32,490 passant edges into 10, 13, and 15 PGL(2,q)-orbits, and exhausts arc extensions from one representative of every orbit. The maximum size is six in every field, before the forced eight-point spectra arise.",
+            "independent_replay": "The Python replay tests passancy by a discriminant rather than conic incidence, verifies the edge-orbit partition directly, and repeats ordered backtracking without the primary search's stabilizer deduplication.",
+            "residual_trust": "The C++17 and Python runtimes, exact prime-field arithmetic, and the manuscript's coordinate-to-geometric correspondence. No Lean theorem covers this terminal finite exclusion.",
+            "soundness_bridge": "Every conic-filling arc is off the fixed conic and every one of its chords is passant. Every nontrivial candidate therefore contains an edge carried to a listed root.",
+            "supporting_artifacts": [
+              {
+                "path": "verification/conic_filling_search.cpp",
+                "repository": "paper",
+                "sha256": "7f55e0dd57f6f0a2abd44154081190e2f210daf304c0f5ffde28d97033024961"
+              },
+              {
+                "path": "verification/conic_filling_replay.py",
+                "repository": "paper",
+                "sha256": "47376be420560b5fb70f3f90101296faf6766fb1a25dde2e3f1ca85efd3cebe2"
+              },
+              {
+                "path": "verification/conic_filling_q13.json",
+                "repository": "paper",
+                "sha256": "2758cb70b678cb9ac26cf9709c52b82ae1e2a35ed069da18e274e78980f00555"
+              },
+              {
+                "path": "verification/conic_filling_q17.json",
+                "repository": "paper",
+                "sha256": "8cabfef0bc2e33b221cb2ec5909993cc52398185277863c0f6be1c133cae077a"
+              },
+              {
+                "path": "verification/conic_filling_q19.json",
+                "repository": "paper",
+                "sha256": "f659ad5025816cb3a1b4886b21666d7b41e8fd9f3e6dc57a520ae101ab29ece2"
+              },
+              {
+                "path": "verification/conic_filling_independent.json",
+                "repository": "paper",
+                "sha256": "9357543c9383f918f413099de835743d75577ff37e566733e66438d22e527e5c"
+              }
+            ]
+          },
+          "route": "exact-replay",
+          "subclaim": "terminal eight-point exclusions"
+        }
+      ],
+      "id": "thm-small-k-conic-filling",
+      "paper_location": "source line 358",
+      "route": "mixed",
+      "row": 29,
+      "source": {
+        "id": "thm:small-k-conic-filling",
+        "kind": "theorem-environment",
+        "sha256": "23c3ad48c78a33f8da0cd94f1f902de4996cecb8c0eb61937273e596cac7ea80"
+      },
+      "trust_boundary": "Lean proves the small-arc moment reductions; the k=6 case inherits rows 25 and 17, the terminal k=7 and k=8 exclusions and sharp maximum-six result are exact-replayed, and the MDS statement is the projective arc--syndrome translation."
+    },
+    {
+      "computation": {
+        "artifacts": [
+          {
+            "path": "check_global_conic_gap.py",
+            "repository": "paper",
+            "sha256": "4a17c22801df0700ef77772613fc6fb41bcc566f13e06b72431b977a43e110fe"
+          },
+          {
+            "path": "check_low_degree_loci.py",
+            "repository": "paper",
+            "sha256": "fab65df95dac888758f28fae19cf1d2ce47ee2a170b73fea5a6cba61ccae16fc"
+          }
+        ],
+        "checker_commands": [
+          {
+            "argv": [
+              "python3",
+              "check_global_conic_gap.py"
+            ]
+          },
+          {
+            "argv": [
+              "python3",
+              "check_low_degree_loci.py"
+            ]
+          }
+        ],
+        "coverage": "All 1,548 frame-normalized six-arcs over F_11 are canonically reduced to the fifteen projective classes; no sampling is used.",
+        "independent_replay": "The low-degree checker deliberately reuses the global checker's canonical class generator so both tables have identical keys; there is no second independent enumeration of the fifteen classes. Both programs reconstruct all coordinates and are independent of Lean.",
+        "residual_trust": "Exact Python integer and finite-field arithmetic, plus the manuscript's coordinate-to-geometric correspondence.",
+        "soundness_bridge": "The scripts regenerate projective classes, stabilizers, uncovered counts, and least vanishing degrees."
+      },
+      "id": "fifteen-class-census-table",
+      "paper_location": "source line 136",
+      "route": "exact-replay",
+      "row": 58,
+      "source": {
+        "id": "fifteen-class-census-table",
+        "kind": "verbatim",
+        "sha256": "4ba850c133bdb3d4cc052f32c8a4c56c020345b1d0ce66383a0e46eef2e6c7e6"
+      },
+      "trust_boundary": "Two exact replays share canonical class keys and regenerate every printed census field used by the proofs."
+    }
+  ],
+  "lean_repository": {
+    "commit": "6d4766d1ea5e9a36f1a507e549c223416a6b506f",
+    "distribution": "separate shared Git repository",
+    "path": ".",
+    "url": "https://github.com/tavisrudd/finitegeom"
+  },
+  "manuscript_pdf": {
+    "path": "clebsch_rigidity.pdf",
+    "repository": "paper",
+    "sha256": "e3a358e662d0fb82be888d7d9b199d967eb6b2171330c6bef321961f35015d12"
+  },
+  "manuscript_sha256": "cdacc2ca215ddb13483c633636ce6d3cd1fc919e9a16fa380d91e8a40cb2ec5d",
+  "public_documents": [
+    {
+      "path": "README.md",
+      "repository": "paper",
+      "sha256": "e2df7a3dba88e7199280ed3277f0cfe4066f92505f86692f357976f8bbdfa343"
+    },
+    {
+      "path": "verification/README.md",
+      "repository": "paper",
+      "sha256": "ed4dd64862e7c8decc33276ae0c16345679a1c201c830dae90b98568d4d4de3d"
+    }
+  ],
+  "reproducibility_environment": {
+    "flake": {
+      "path": "flake.nix",
+      "repository": "paper",
+      "sha256": "28fed9dedeb8702bf3def3523ec918db6cde9299657966fd3e05f1f9ea7ba432"
+    },
+    "formal_toolchain": {
+      "lean": "4.32.0-rc1",
+      "mathlib_commit": "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+    },
+    "lock": {
+      "path": "flake.lock",
+      "repository": "paper",
+      "sha256": "b2ab69a7105fe245eb9500a4a72c3793b2c1ecae969c1f1bf743d3efc71167a8"
+    },
+    "paper_toolchain": {
+      "git": "2.54.0",
+      "nix": "2.34.8",
+      "python": "3.13.14",
+      "texlive": "scheme-full from the pinned nixpkgs input"
+    },
+    "platform": "x86_64-linux"
+  },
+  "schema": "clebsch-rigidity-trust-manifest-v1",
+  "statement_identity": {
+    "path": "verification/statement_identity.json",
+    "repository": "paper",
+    "sha256": "8f975069fcadb0198f2dc0d87da928e4829d539560cfa08a69967585e028ac3a"
+  },
+  "verify_all": {
+    "checker_output_certificate": {
+      "generator": {
+        "path": "verification/capture_checker_outputs.py",
+        "repository": "paper",
+        "sha256": "bc9fa7f25d4dc9619a6a4caad284a2917e52d56e5644967ca0ef77b5e58b13cb"
+      },
+      "output": {
+        "path": "verification/checker_outputs.json",
+        "repository": "paper",
+        "sha256": "1de288625f72f7cb6b32ecd6d60bf37e4a40d43c797157926dc75a5877eaca15"
+      }
+    },
+    "checks": [
+      {
+        "argv": [
+          "python3",
+          "verification/test_verification_tools.py"
+        ],
+        "cwd": ".",
+        "id": "verification-tool-tests",
+        "repository": "paper",
+        "timeout_seconds": 120
+      },
+      {
+        "argv": [
+          "python3",
+          "verification/extract_statement_identity.py",
+          "--output",
+          "verification/statement_identity.json",
+          "--check"
+        ],
+        "cwd": ".",
+        "id": "statement-identity",
+        "repository": "paper",
+        "timeout_seconds": 60
+      },
+      {
+        "argv": [
+          "python3",
+          "verification/check_manuscript_build.py"
+        ],
+        "cwd": ".",
+        "id": "manuscript-build",
+        "repository": "paper",
+        "timeout_seconds": 300
+      },
+      {
+        "argv": [
+          "python3",
+          "verification/build_trust_manifest.py",
+          "--check"
+        ],
+        "cwd": ".",
+        "id": "trust-manifest-regeneration",
+        "repository": "paper",
+        "timeout_seconds": 60
+      },
+      {
+        "argv": [
+          "python3",
+          "check_rigidity_degenerate_conic.py"
+        ],
+        "cwd": ".",
+        "id": "check-rigidity-degenerate-conic",
+        "repository": "paper",
+        "stdout_bytes": 498,
+        "stdout_lines": 12,
+        "stdout_sha256": "e90ad77bcc9d96f7e0094c4ccd56cd6b154df5db8398f992a2493113488d491b",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_decoding.py"
+        ],
+        "cwd": ".",
+        "id": "check-decoding",
+        "repository": "paper",
+        "stdout_bytes": 1199,
+        "stdout_lines": 30,
+        "stdout_sha256": "423bd95dd7bcdb51784efa468a1dc8183ac1ae75ca95bb58e67be6016ac30c67",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_chirality.py"
+        ],
+        "cwd": ".",
+        "id": "check-chirality",
+        "repository": "paper",
+        "stdout_bytes": 2457,
+        "stdout_lines": 61,
+        "stdout_sha256": "57584df55bf172b385a91665d732af9bcab33a895cf423215a25121d83f7743d",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_code_automorphisms.py"
+        ],
+        "cwd": ".",
+        "id": "check-code-automorphisms",
+        "repository": "paper",
+        "stdout_bytes": 636,
+        "stdout_lines": 18,
+        "stdout_sha256": "445605d6bb2b140ee6bbee1f95c59cb0a13c91ce2c60453e09915b6733e23c8e",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_global_conic_gap.py"
+        ],
+        "cwd": ".",
+        "id": "check-global-conic-gap",
+        "repository": "paper",
+        "stdout_bytes": 1988,
+        "stdout_lines": 31,
+        "stdout_sha256": "fdd0b0f389110860ab535d0228d4bac1c9ca780995cfe7efaab829d38e219775",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_perturbation_gap.py"
+        ],
+        "cwd": ".",
+        "id": "check-perturbation-gap",
+        "repository": "paper",
+        "stdout_bytes": 2824,
+        "stdout_lines": 24,
+        "stdout_sha256": "c30bc8247f1015b4f5077499345d25fb307a585f64f1aceced7b0bfdcc69e198",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_low_degree_loci.py"
+        ],
+        "cwd": ".",
+        "id": "check-low-degree-loci",
+        "repository": "paper",
+        "stdout_bytes": 2310,
+        "stdout_lines": 28,
+        "stdout_sha256": "2f88bb38942425b9cdb3d1f0d9e2293ac4d6202d5fb004602e29649560bd2719",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_small_q_uniqueness.py"
+        ],
+        "cwd": ".",
+        "id": "check-small-q-uniqueness",
+        "repository": "paper",
+        "stdout_bytes": 1162,
+        "stdout_lines": 16,
+        "stdout_sha256": "380ca51dce260f0794de15bf0c3a710139c2fe2734b84475bd638b8413471979",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_q19_nonexample.py"
+        ],
+        "cwd": ".",
+        "id": "check-q19-nonexample",
+        "repository": "paper",
+        "stdout_bytes": 915,
+        "stdout_lines": 22,
+        "stdout_sha256": "fe73b5c5906e059ea83045ca09022b854239d281f9ff121f15ee11340373d21f",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "check_small_k_conic_filling.py"
+        ],
+        "cwd": ".",
+        "id": "check-small-k-conic-filling",
+        "repository": "paper",
+        "stdout_bytes": 691,
+        "stdout_lines": 6,
+        "stdout_sha256": "17207a9827e6e961123950e34881a6e63533903cf3fc226e3234f71abdb8866e",
+        "timeout_seconds": 900
+      },
+      {
+        "argv": [
+          "python3",
+          "verification/conic_filling_verify.py"
+        ],
+        "cwd": ".",
+        "id": "check-conic_filling-eight-point-exclusion",
+        "repository": "paper",
+        "stdout_bytes": 228,
+        "stdout_lines": 1,
+        "stdout_sha256": "bbf3aed130b23a338637a90518ed823a6f7b7c37ee16d8e9a473fbb87908672d",
+        "timeout_seconds": 120
+      },
+      {
+        "argv": [
+          "scripts/guarded-lean",
+          "RelativeConicArcs/Gates/ClebschRigidityTrust.lean"
+        ],
+        "cwd": ".",
+        "id": "lean-rigidity-trust-gate",
+        "repository": "lean",
+        "timeout_seconds": 1800
+      }
+    ],
+    "command": "nix develop --command python3 verification/verify_release.py --lean-root /absolute/path/to/finitegeom",
+    "entry_point": {
+      "path": "verification/verify_release.py",
+      "repository": "paper",
+      "sha256": "bf1404444093433de6133c2d70fbacf3268385a482e828d449aac784718594b0"
+    },
+    "output": {
+      "path": "verification/verify-release-output.json",
+      "repository": "paper",
+      "sha256": "a74b4f62f2afc0aedb715668f186b13b71be216a499d42f5caac3bb9606b1c26"
+    },
+    "verification_tools": [
+      {
+        "path": "verification/extract_statement_identity.py",
+        "repository": "paper",
+        "sha256": "7e0fff5c1c72f56ec0fac62c637f232d61cef1f4ad9ab19684aea452071a812f"
+      },
+      {
+        "path": "verification/build_trust_manifest.py",
+        "repository": "paper",
+        "sha256": "fc40be06b7b86ce278f6a6a30813c6882b1151385382d664ff2426fc865b34bc"
+      },
+      {
+        "path": "verification/verify_trust_manifest.py",
+        "repository": "paper",
+        "sha256": "af9f4c9aed9879ab818bccb5d9241e9734c56372245f5863909109ca8b143d53"
+      },
+      {
+        "path": "verification/test_verification_tools.py",
+        "repository": "paper",
+        "sha256": "fb6f638f1e7df13c695f1c6693a69e5540e76c82771dcbb8cf16fe8d83086d93"
+      },
+      {
+        "path": "verification/check_manuscript_build.py",
+        "repository": "paper",
+        "sha256": "bddce493896dac2c2c703e45071336b03ff36ec6f91d8cf57f4e77c1c1a99f26"
+      }
+    ]
+  }
+}
