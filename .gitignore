@@ -11,5 +11,3 @@ __pycache__/
 *.run.xml
 *.synctex.gz
 *.xdv
-/clebsch_rigidity.pdf
-/clebsch_rigidity_computational_companion.pdf

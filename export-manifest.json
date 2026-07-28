@@ -1,18 +1,15 @@
 {
   "excluded_path_count": 0,
-  "excluded_release_outputs": [
-    "clebsch_rigidity.pdf",
-    "clebsch_rigidity_computational_companion.pdf"
-  ],
+  "excluded_release_outputs": [],
   "excluded_symlinks": [],
   "exporter_blob": "d38f45b035738e161b53233b597538b885c4d039",
   "files": [
     {
-      "bytes": 176,
+      "bytes": 108,
       "mode": "100644",
       "path": ".gitignore",
       "role": "export-support",
-      "sha256": "847718a363145fa2c45535b3fb2b580336c66d22e87c1936e8c572351d70a216",
+      "sha256": "8aec252fe1e8e2a04924eeac30581deea8368b151c9e82d6601a1d6393be8b27",
       "source_blob": null
     },
     {
@@ -25,11 +22,20 @@
       "source_blob": "03712b89fa265685e2db01465fb94713ad151fad"
     },
     {
+      "bytes": 470,
+      "mode": "100644",
+      "path": "LICENSE",
+      "rewrites": [],
+      "role": "support",
+      "sha256": "55bd30dbbfb4a62d77bfd74a183e68ac3fa392c12802e0b56ad02613b9248d7c",
+      "source_blob": "48fe1688b86d4e1feef1d929170e74cc8adff356"
+    },
+    {
       "bytes": 297,
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "c6bc28def3e875bdc23aad8867035d7e5da55b7d84b2bf034e7cb2a66303be92",
+      "sha256": "ddb33d3d8f2ce577e96a4547f2e3c33c8a19ecb8bc6ad22a65b0303d68c4be02",
       "source_blob": null
     },
     {
@@ -132,6 +138,15 @@
       "source_blob": "e6ae20cd4ba49c40470f443b73d3756a35c870be"
     },
     {
+      "bytes": 136258,
+      "mode": "100644",
+      "path": "clebsch_rigidity.pdf",
+      "rewrites": [],
+      "role": "release-output",
+      "sha256": "2790be40452d1e23ebd22ea4052e159189689711b88c2c98c47b9cda94a4e1a6",
+      "source_blob": "fcbc1e19507f4a7a9b1d71689e4828f5f0df8de8"
+    },
+    {
       "bytes": 52833,
       "mode": "100644",
       "path": "clebsch_rigidity.tex",
@@ -139,6 +154,15 @@
       "role": "manuscript-source",
       "sha256": "f204c218b92973e2203f84b0b5323dc0e54f2900157c486051a33123fc389ee4",
       "source_blob": "6609851f0d76d60c89ccafab65b41c4ef016bc79"
+    },
+    {
+      "bytes": 92274,
+      "mode": "100644",
+      "path": "clebsch_rigidity_computational_companion.pdf",
+      "rewrites": [],
+      "role": "release-output",
+      "sha256": "57de6ce31fe5f3ba21134c3b35e814f598f484327e1039072950bf48eccf8497",
+      "source_blob": "fd6010a425c66193bb94715758d6a06a68507126"
     },
     {
       "bytes": 22554,
@@ -369,7 +393,7 @@
   ],
   "paper_registry_sha256": "e3d7a09841ddaa925ef9196f1d36df4be5efa06c2fb51d1e557cd6cdde971f22",
   "repository": "clebsch-rigidity",
-  "repository_map_sha256": "c6ce20755b904d93ebf33e840efa9c6d3eef33b2a5777679a3c1e5e2629c0c7f",
+  "repository_map_sha256": "ea07e62132ccdf3b29a24c1d1974a0cd7ee11b77d338c33660c732cb6889428d",
   "schema_version": 1,
-  "source_commit": "7934c752b5c6b3f147354f760067bfc9adfc6d44"
+  "source_commit": "e134b0fe8a5329472940c5e8ecaabfbee2c9e4e8"
 }
