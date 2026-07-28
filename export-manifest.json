@@ -16,11 +16,20 @@
       "source_blob": null
     },
     {
+      "bytes": 1051,
+      "mode": "100644",
+      "path": ".zenodo.json",
+      "rewrites": [],
+      "role": "verification",
+      "sha256": "fea669b9c54def85bf6f587b5517948ba8181dd12998545e113a60eaa5b48066",
+      "source_blob": "03712b89fa265685e2db01465fb94713ad151fad"
+    },
+    {
       "bytes": 297,
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "790c9c8d88d71a2767eef1cb2cb7c4fce21a75eaf34213680c34e4f0a99862c1",
+      "sha256": "c6bc28def3e875bdc23aad8867035d7e5da55b7d84b2bf034e7cb2a66303be92",
       "source_blob": null
     },
     {
@@ -362,5 +371,5 @@
   "repository": "clebsch-rigidity",
   "repository_map_sha256": "c6ce20755b904d93ebf33e840efa9c6d3eef33b2a5777679a3c1e5e2629c0c7f",
   "schema_version": 1,
-  "source_commit": "9d5c540e06b2acd4083c498fb6d0977db708af4e"
+  "source_commit": "7934c752b5c6b3f147354f760067bfc9adfc6d44"
 }
