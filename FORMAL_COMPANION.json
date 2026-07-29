@@ -8,7 +8,7 @@
   },
   "concept_doi": "10.5281/zenodo.21650878",
   "human": {
-    "commit": "77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2",
+    "commit": "9711f4a1adf4fca40729d41442dce9e76c7db3a0",
     "gate": "RelativeConicArcs.Gates.ClebschRigidityHuman",
     "manifest": "trust/manifests/clebsch_rigidity_human.json",
     "repository": "https://github.com/tavisrudd/finitegeom"

@@ -23,7 +23,7 @@ order-11 certificate repository.
 
 The human-scale formal source is distributed in
 [`finitegeom`](https://github.com/tavisrudd/finitegeom), pinned at commit
-`77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2`. The generated order-11 action,
+`9711f4a1adf4fca40729d41442dce9e76c7db3a0`. The generated order-11 action,
 orbit, and decoder modules are in
 [`finitegeom-clebsch-q11-certificates`](https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates),
 pinned at commit `f6912c4c020b8bf9e3e7bd67c486af9275634989`.
