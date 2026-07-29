@@ -1,5 +1,7 @@
 # Clebsch rigidity paper
 
+[![DOI](https://zenodo.org/badge/1315290443.svg)](https://doi.org/10.5281/zenodo.21652792)
+
 This repository contains the rigidity and decoder manuscript
 *Reconstructing the Clebsch code from its deep-hole syndrome locus*.
 
