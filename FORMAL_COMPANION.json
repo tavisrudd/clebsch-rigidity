@@ -1,0 +1,18 @@
+{
+  "certificate": {
+    "commit": "f6912c4c020b8bf9e3e7bd67c486af9275634989",
+    "finitegeom_dependency": "ef6317c5e1a348a91a1928104f9c8e1831bfb03d",
+    "gate": "RelativeConicArcs.Gates.ClebschRigidityTrust",
+    "manifest": "MANIFEST.json",
+    "repository": "https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates"
+  },
+  "concept_doi": "10.5281/zenodo.21650878",
+  "human": {
+    "commit": "77c0d6bb5a45a1aa15a0ab90b7db307e1a1804d2",
+    "gate": "RelativeConicArcs.Gates.ClebschRigidityHuman",
+    "manifest": "trust/manifests/clebsch_rigidity_human.json",
+    "repository": "https://github.com/tavisrudd/finitegeom"
+  },
+  "relationship": "optional formal companion; no manuscript claim depends on Lean",
+  "schema": "clebsch-rigidity-formal-companion-v1"
+}
