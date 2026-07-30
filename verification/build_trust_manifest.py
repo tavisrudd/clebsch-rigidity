@@ -21,7 +21,7 @@ IDENTITY_PATH = PAPER_ROOT / "verification" / "statement_identity.json"
 OUTPUT_PATH = PAPER_ROOT / "verification" / "trust_manifest.json"
 GATE_PATH = "RelativeConicArcs/Gates/ClebschRigidityTrust.lean"
 AUDIT_PATH = "verification/clebsch_rigidity_trust/axiom-audit.txt"
-PINNED_LEAN_COMMIT = "c5e2d8997ed86dcbcd431b0d4a546983f7baf812"
+PINNED_LEAN_COMMIT = "35808ac74c71df5ad5e88556092c56d78d71b345"
 PINNED_BASE_COMMIT = "81227352974bf7d28f84cb6866936f842fb4de02"
 
 
@@ -267,8 +267,8 @@ def lean(
             "axioms": {terminal: axioms[terminal] for terminal in terminals},
             "validation": {
                 "command": (
-                    "scripts/guarded-lean "
-                    "RelativeConicArcs/Gates/ClebschRigidityTrust.lean"
+                    "nix develop --command lake build "
+                    "RelativeConicArcs.Gates.ClebschRigidityTrust"
                 ),
                 "toolchain": {
                     "lean": "4.32.0-rc1",
@@ -607,8 +607,12 @@ def checks() -> list[dict[str, object]]:
             "repository": "lean",
             "cwd": ".",
             "argv": [
-                "scripts/guarded-lean",
-                "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+                "nix",
+                "develop",
+                "--command",
+                "lake",
+                "build",
+                "RelativeConicArcs.Gates.ClebschRigidityTrust",
             ],
             "timeout_seconds": 1800,
         }
