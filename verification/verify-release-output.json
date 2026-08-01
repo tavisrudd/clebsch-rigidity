@@ -113,7 +113,7 @@
     "companion_trust_sha256": "0e602c27957fbad44a14d6471e74348937591f3a3ab75075305afdfc122160ff",
     "manuscript_pdf_sha256": "5accf6215a6fac7d269c2ced66fd9bb755a6e75dc9db1b1193dafa7ce9186fc1",
     "manuscript_sha256": "492f07ad5e88ba039ffbb9be49ee1c41c9e2ad20e6ed1f1ae4c79f7d6ada2a45",
-    "release_surface_sha256": "ceb3ba217a0e9d95ec8a066e4f359cabacab6467d0236fe4fab40f4d721a7983",
+    "release_surface_sha256": "a5e5596e4137c4b99239521ab55fc08a7f97d1d7a00816260f03ae612feb506b",
     "statement_identity_sha256": "2af0edf7d2bf22e2d6664201aa6f99018af958f71b67f4e82c97f61d5414139c"
   },
   "lean_commit": "42ab1a2db30178cf23aa8393d886c63ded24bfbd",
