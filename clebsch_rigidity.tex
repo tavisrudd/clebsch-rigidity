@@ -379,9 +379,12 @@ Theorem~\ref{lem:chord-defect}, on the other hand, gives
  |\cU(A)|=22-c(A),
 \]
 where $c(A)$ counts the nonvertex triple-chord concurrences, namely Dye's
-Brianchon points.  Dye proves $c(A)\le10$, with equality precisely on one
-$\mathrm{PGL}_3(K)$-orbit~\cite[\S2.2--2.3, Theorem~1,
-pp.~275--276]{Dye1991}.  Thus $|\cU(A)|\ge12$.  Both bounds are equalities:
+Brianchon points.  Dye proves $c(A)\le10$, with the equality cases, when
+they occur, forming one $\mathrm{PGL}_3(K)$-orbit
+\cite[\S2.2--2.3, Theorem~1,
+pp.~275--276]{Dye1991}. Here $\operatorname{char}\F_{11}=11\ne2,5$ and
+$5=4^2$ in $\F_{11}$, so Dye's equality orbit exists. Thus
+$|\cU(A)|\ge12$. Both bounds are equalities:
 $c(A)=10$, so $A$ is a Clebsch hexagon.
 
 For a Clebsch hexagon the fifteen chords are exterior to Dye's associated
@@ -1121,12 +1124,20 @@ three-subsets have size ten, are exchanged by complementation, and produce
 a nonzero signed cubic determined up to its overall sign.
 
 Antipodal exchange carries one five-suborbit of $\Omega$ to the other, so
-$A'=AR$. On $L^-$ the two orbitals therefore act oppositely. Choose one
-point above each axis. The restriction of $A$ is represented by a symmetric
-zero-diagonal matrix $B$ with off-diagonal entries $\pm1$: between two
-fibres, exactly one point lies in $A(\omega)$ and the other in
-$A'(\omega)$. Changing a lift switches the corresponding row and column;
-exchanging the orbitals negates $B$.
+$A'=AR$. Both orbitals are self-paired. Indeed, in the coset model
+$\Omega=A_5/H$ with $H=\langle r\rangle$, $r=(12345)$, the two nontrivial
+double cosets have representatives $a=(345)$ and $b=(23)(45)$; they are
+inverse-stable because $r^2ar^2=a^{-1}$ and $b=b^{-1}$.
+
+The stabilizer $H$ of a point acts regularly on the other five axes. Each
+five-suborbit is an $H$-orbit, so its projection to those axes is an
+equivariant map between regular five-sets and hence a bijection. Thus between
+two fibres exactly one point lies in $A(\omega)$ and the other in
+$A'(\omega)$. On $L^-$ the two orbitals act oppositely. Choosing one point
+above each axis therefore represents the restriction of $A$ by a symmetric
+zero-diagonal matrix $B$ with off-diagonal entries $\pm1$. Changing a lift
+switches the corresponding row and column; exchanging the orbitals negates
+$B$.
 
 Fix $\omega$ and choose the other five lifts in $A(\omega)$, so
 $B_{0i}=1$. The stabilizer $C_5$ of $\omega$ acts regularly on the other
@@ -1156,14 +1167,32 @@ B=\begin{pmatrix}
 1&-1&-1&1&1&0
 \end{pmatrix}.
 \]
-A two-distance calculation on the pentagon gives zero for every
-off-diagonal entry of $B^2$, while its diagonal entries are five. Hence
-$B^2=5I$.
+The pentagon gives $B^2=5I$ directly. The dot product of row zero with any
+other row is zero because the four remaining entries split as two plus and
+two minus. For two nonzero rows, the contribution through vertex zero is
+$1$, while the three remaining pentagon vertices contribute $-1$, whether
+the two indices are adjacent or diagonal. Thus every off-diagonal entry of
+$B^2$ vanishes, while each diagonal entry is five.
+Since $A-A'$ vanishes on the fibre-even lattice and acts as $2B$ on
+$L^-$, this also gives the full orbital identity
+\[
+ (A-A')^2=10(I-R).
+\]
+It also recovers the original intersection count. For a nonantipodal pair,
+two of the four remaining axes have equal signs and two have opposite signs;
+each axis has two lifts. Hence the eight intermediate points contribute four
+positive and four negative products.
 
 Its triangle products are switching-invariant. They are constant on the
 two $A_5$-orbits of three-subsets, take opposite values on complementary
 triples, and are not constant; after choosing the overall sign of $C$ they
-are exactly the coefficients $c_{ijk}$.  Conversely, they satisfy
+are exactly the coefficients $c_{ijk}$. For example,
+\[
+ c_{012}=B_{01}B_{12}B_{20}=1,
+ \qquad c_{345}=B_{34}B_{45}B_{53}=-1.
+\]
+These triples are complementary, so $A_5$-invariance proves the sign rule
+on both orbits. Conversely, the coefficients satisfy
 \[
  c_{ijk}c_{ij\ell}c_{ik\ell}c_{jk\ell}=1
  \qquad(i<j<k<\ell).
@@ -1230,25 +1259,43 @@ gives the exact identity
 \[
  \det(\Phi_x)=-C(x).
 \]
-As an $A_5$-map, $x\mapsto\Phi_x$ identifies the augmentation module with
-the five-dimensional summand in
+The nonzero $A_5$-map $x\mapsto\Phi_x$ has irreducible source $V_5$, so
+it identifies the augmentation module with the five-dimensional summand in
 \[
  \operatorname{Hom}_E(V_+,V_-)\cong V_4\oplus V_5;
 \]
 this is the standard tensor-product rule $V_3\otimes V_{3'}=V_4\oplus V_5$.
-Let $\Lambda\cong V_4$ be its trace-orthogonal complement in the dual
-matrix space. We only need to know that determinant does not vanish on
-$\Lambda$. In the eigenbases above, a direct trace check gives the witness
+Using the invariant forms, regard
+$\Phi\in\operatorname{Hom}_E(V_+,V_-)$ and
+$\Psi\in\operatorname{Hom}_E(V_-,V_+)$. Pair these spaces by the invariant
+perfect pairing
 \[
- \Psi=\begin{pmatrix}
- 0&2(\sqrt5-1)&\sqrt5-4\\
- 1&0&0\\
- 0&1&0
- \end{pmatrix}\in\Lambda,
- \qquad \det(\Psi)=\sqrt5-4\ne0.
+ \langle\Psi,\Phi\rangle=\operatorname{tr}(\Psi\Phi),
 \]
-Thus determinant does not vanish on $\Lambda$; its restriction is an
-$A_5$-invariant cubic. The character
+Its annihilator has dimension four and is the complementary $V_4$, denoted
+$\Lambda$. In the displayed eigenbases,
+solving the six coefficient equations
+$\operatorname{tr}(\Psi\Phi_x)=0$ gives the four-dimensional solution
+space
+\[
+ \Psi_z=\begin{pmatrix}0&a(z)&b(z)\\z_0&0&z_1\\z_2&z_3&0\end{pmatrix},
+ \qquad z=(z_0,z_1,z_2,z_3),
+\]
+where
+\[
+\begin{aligned}
+a(z)&=(\sqrt5-1)z_0+\frac{3-\sqrt5}{2}z_1
+      +\frac{\sqrt5-5}{2}z_2+(\sqrt5-1)z_3,\\
+b(z)&=\frac{\sqrt5-5}{2}z_0+(1-\sqrt5)z_1
+      +(\sqrt5-1)z_2+\frac{\sqrt5-3}{2}z_3.
+\end{aligned}
+\]
+Thus this family is all of $\Lambda$, and
+\[
+ \det(\Psi_z)=a(z)z_1z_2+b(z)z_0z_3.
+\]
+At $z=(1,0,0,1)$ the determinant is $\sqrt5-4\ne0$. Hence determinant
+restricts to a nonzero $A_5$-invariant cubic on $\Lambda$. The character
 $\chi_{V_4}=(4,0,1,-1,-1)$ on the classes
 $1,2,3,5A,5B$ gives the symmetric-cube character $(20,0,2,0,0)$, hence
 \[
