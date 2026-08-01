@@ -1,5 +1,11 @@
 # Clebsch rigidity paper
 
+## Read the papers
+
+[**Open the main paper (PDF) →**](clebsch_rigidity.pdf)
+
+[**Open the computational companion (PDF) →**](clebsch_rigidity_computational_companion.pdf)
+
 **Series:** *The Clebsch cubic: recovering, orienting, and realizing --- I*
 
 The shared progression is expository; this manuscript is logically
