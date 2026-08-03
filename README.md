@@ -1,11 +1,5 @@
 # Clebsch rigidity paper
 
-## Read the papers
-
-[**Open the main paper (PDF) →**](clebsch_rigidity.pdf)
-
-[**Open the computational companion (PDF) →**](clebsch_rigidity_computational_companion.pdf)
-
 **Series:** *The Clebsch cubic: recovering, orienting, and realizing --- I*
 
 The shared progression is expository; this manuscript is logically
@@ -41,7 +35,15 @@ manifest, validators, clean release runner, unit tests, and deterministic
 successful output. The twenty selected exact checker invocations and pinned
 Nix environment are release-local; the aggregate formal gate is
 `RelativeConicArcs/Gates/ClebschRigidityTrust.lean` in the shared formal
-certificate package.
+certificate package.  It imports the causal rigidity spine and all eight
+orientation packets.  The commutant terminals are conditional only on the
+explicit classical conjugate `3+3'` Schur--Galois interface recorded in the
+trust manifest; golden equivariance and integral descent are kernel checked.
+
+The main paper's q11 orbit decomposition and decoding oracle are structural
+proofs from eigenspaces, stabilizers, orbit--stabilizer, and chord-incidence
+identities. Generated q11 tables are retained only as an independent formal
+cross-check and as evidence for the companion's sharper finite census claims.
 
 The reusable formal source is distributed in
 `https://github.com/tavisrudd/finitegeom`; the aggregate q11 gate is in

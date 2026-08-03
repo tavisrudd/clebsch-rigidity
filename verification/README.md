@@ -42,8 +42,17 @@ repository, whose manifest pins the reusable
 `https://github.com/tavisrudd/finitegeom` dependency. Its tracked axiom
 output is `verification/clebsch_rigidity_trust/axiom-audit.txt`.
 The gate records the exact two classical Dye assumptions used by the
-rigidity implication; the other printed axioms are part of Lean's ordinary
-logical trust boundary or are shown absent.
+rigidity implication. It also prints the causal rigidity and eight-packet
+orientation terminals. The rational and integral commutant theorems take the
+explicit proposition-valued classical `3+3'` splitting interface recorded in
+the trust manifest; because this is a theorem parameter rather than a global
+axiom, it does not appear in `#print axioms`. The other printed axioms are part
+of Lean's ordinary logical trust boundary or are shown absent.
+
+The main paper's q11 orbit and decoder proofs do not depend on those generated
+tables: they close by stabilizer/orbit arguments and chord-incidence identities.
+The table modules are a redundant formal replay and support the companion's
+strictly sharper finite census results.
 
 The twelve Python programs at the paper root and the certificate and replay
 programs under `verification/` are deterministic exact checks. They enumerate

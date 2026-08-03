@@ -1,7 +1,7 @@
 {
   "certificate": {
-    "commit": "f6912c4c020b8bf9e3e7bd67c486af9275634989",
-    "finitegeom_dependency": "ef6317c5e1a348a91a1928104f9c8e1831bfb03d",
+    "commit": "09d8e174880e7370966da788da3c5d303df8af4f",
+    "finitegeom_dependency": "570086982b26075a71a331a81bb1b519e9a27e7f",
     "gate": "RelativeConicArcs.Gates.ClebschRigidityTrust",
     "manifest": "MANIFEST.json",
     "repository": "https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates"

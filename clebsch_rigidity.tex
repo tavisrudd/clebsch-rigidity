@@ -62,23 +62,18 @@ monomial equivalence.  The reconstructed conic then determines its polarity,
 and Dye's theorem identifies the stabilizer as $A_5$; none of this geometry
 is assumed.
 
-For the resulting code, the reconstructed conic equation is an exact
-syndrome-distance oracle, while decoder ambiguity recovers the Brianchon
-geometry and an orientation torsor on the three-coordinate supports.
-The twelve deep-hole directions also form a twisted two-cover of six axes.
-Its signed orbital operator $B$ satisfies $B^2=5I$, and its triangle
-products are exactly the coefficients of the support-orientation cubic.
-Thus the support cubic and the golden continuation algebra are two
-presentations of the same intrinsic signed two-graph; the cubic is the
-sole nonsymmetric term in the operator's diagonal determinant pencil.
-Its six ordinary nodes form a projective frame, so the cubic also recovers
-the unlabelled axis carrier.
-The conceptual tools are a universal chord-defect identity and a
-partial-cover bound.  Together with passant counts, they show that any
-$k$-arc whose uncovered locus is a nonsingular conic has $q$ odd and
-\[
- 2k-3\le q\le\frac{k(k-1)+3}{3}.
-\]
+Nearest-codeword ambiguity then reconstructs an unordered orientation torsor
+on six axes.  Its signed orbital operator satisfies $B^2=5I$, and triangle
+holonomy gives the support cubic through
+$c_{ijk}=B_{ij}B_{jk}B_{ki}$; equivalently, this cubic is the sole
+nonsymmetric term in the diagonal determinant pencil of $B$.  Thus the same
+syndrome and support data recover both the code and its golden orientation.
+
+The proof uses a universal chord-defect identity and a partial-cover bound
+for rigidity, then decoder ambiguity and the orbital pentagon for orientation.
+As a secondary uniform consequence, any $k$-arc whose uncovered locus is a
+nonsingular conic has $q$ odd and lies in the field window
+$2k-3\le q\le(k(k-1)+3)/3$.
 \end{abstract}
 
 \noindent\textbf{Keywords.} Clebsch hexagon; MDS code; deep hole; finite
@@ -170,7 +165,20 @@ locus, the two five-valent orbitals recover a signed operator on the six
 antipodal axes.  Triangle holonomy identifies its switching class with the
 support bipartition and recovers the integral order $\mathbf Z[\sqrt5]$.
 
-The main general theorem is a uniform field window for conic-filling arcs.
+This orientation is the second structural pillar.  With the normalization
+of Theorem~\ref{thm:orientation-two-graph}, its signed operator and support
+cubic satisfy
+\[
+ \begin{gathered}
+ B^2=5I,\qquad c_{ijk}=B_{ij}B_{jk}B_{ki},\\
+ \det\!\bigl(B+\operatorname{diag}(x_0,\ldots,x_5)\bigr)
+ =e_6(x)-e_4(x)+5e_2(x)-125-2C(x).
+ \end{gathered}
+\]
+Thus triangle holonomy and the diagonal determinant pencil recover the same
+orientation torsor directly from nearest-codeword data.
+
+A secondary general theorem gives a uniform field window for conic-filling arcs.
 For an arbitrary conic-filling $k$-arc, the chord moments and a
 partial-cover theorem force $q$ odd and
 $2k-3\le q\le(k(k-1)+3)/3<\binom{k}{2}$.  For a Clebsch hexagon $K$, the
@@ -210,7 +218,16 @@ order.  A separate computational companion
 \cite{RuddComputational2026} proves sharper finite consequences: a
 degree-three characterization and numerical gap at $q=11$, uniqueness of
 $q=11$ among conic-filling six-arcs, classification through eight points,
-and an exact $q=13$ binary incidence-code theorem.
+and the original computational form of an exact $q=13$ binary incidence-code
+theorem.  The forthcoming Paper~IV extracts that theorem into its own
+structural and reproducible account~\cite{RuddPassant2026}.
+
+This is Paper~I of a four-paper sequence organized by what successive
+constructions forget and recover.  Paper~II studies what the conic matching
+quotient remembers~\cite{RuddFactorization2026}.  Paper~III, also called
+\emph{passages}, supplies and propagates the characteristic-zero golden
+source~\cite{RuddPassages2026}.  Paper~IV isolates the $q=13$ passant code
+and its reconstruction theorem.
 
 \section{The Clebsch hexagon}
 \label{sec:hexagon}
@@ -454,9 +471,9 @@ In the conic case, $q$ is therefore odd and every chord is passant. An
 off-conic point lies on at most $(q+1)/2$ passants, so the $k-1$ chords
 through a vertex give $q\ge2k-3$.
 
-The $m$ chords form a partial line cover whose $q+1$ holes are the
-noncollinear points of the conic.  The partial-cover bound of Blokhuis,
-Brouwer, and Sz\H{o}nyi gives~\cite[Proposition~1.5]{BBS2010}
+The $m$ chords cover the complement of the conic by passant (elliptic)
+lines.  The exact conic-complement bound of Blokhuis, Brouwer, and
+Sz\H{o}nyi gives~\cite[Proposition~1.6]{BBS2010}
 \[
  m\ge 2q-1-\frac{q+1}{2}=\frac{3(q-1)}2.
 \]
@@ -632,6 +649,13 @@ nonzero syndromes, hence ten distinct cosets. Every coset has $|C|$ words.
 The stabilizer further organizes all the small point sets that occur in the
 decoder and orientation constructions.
 
+The next proposition is a structural calculation, not an extraction from
+the finite orbit tables.  We include the stabilizer bookkeeping because it
+is precisely what makes the seven-orbit decomposition independently
+auditable: element eigenspaces determine subgroup fixed points,
+orbit--stabilizer determines their masses, and the masses exhaust the
+projective plane.
+
 \begin{proposition}[The $A_5$ point orbits]
 \label{prop:a5-point-orbits}
 Let $G=\operatorname{Stab}(A)\cong A_5$. Its orbits on $\PG(2,11)$ have
@@ -654,26 +678,38 @@ We derive the orbit sizes without using the finite enumeration.
 The argument first determines the points with each possible nontrivial
 stabilizer, then applies orbit--stabilizer to recover the orbit lengths.
 
-Since $11\nmid60$, the representation is semisimple, and the ternary
-icosahedral representation is irreducible; hence $G$ fixes no projective
-point. The ordinary
-three-dimensional icosahedral character, reduced in $\F_{11}$, shows that
-an involution, an element of order three, and an element of order five fix
-respectively $13$, $1$, and $3$ projective points. Indeed, an involution
-has a one-dimensional eigenspace and a two-dimensional eigenspace; the
-nontrivial order-three eigenvalues are not in $\F_{11}$; and the three
-order-five eigenvalues are distinct because $5\mid10$. Restricting the same
-representation to the standard subgroups of $A_5$ gives the following
-common-fixed-point ledger; the standard subgroup classification of $A_5$
-shows that these are all possible nontrivial proper point stabilizers. Here
-$D_5$ has order ten, and the last row counts points whose stabilizer is
-exactly the displayed subgroup type.
-For the noncyclic entries, determine the common projective eigenlines of
-standard generators: a $D_5$ normalizer retains one of the three $C_5$
-eigenlines, an $S_3$ normalizer retains the unique $C_3$ eigenline, a $V_4$
-has three
-simultaneous eigenlines, and its overgroup $A_4$ permutes those three and
-fixes none. This gives the second row.
+Since $11\nmid60$, Maschke's theorem applies.  Moreover $5$ is a square in
+$\F_{11}$, so the two ordinary ternary icosahedral characters are realized
+over $\F_{11}$, and the ordinary and Brauer characters agree on every
+class.  On the classes $1,2,3,5A,5B$, either has values
+$3,-1,0,\phi,\bar\phi$, where
+$\phi+\bar\phi=1$ and $\phi\bar\phi=-1$; using the class sizes
+$1,15,20,12,12$ gives
+\[
+ \langle\chi,\chi\rangle
+ =\frac{9+15+12(\phi^2+\bar\phi^2)}{60}=1.
+\]
+Thus the cross-characteristic reduction is absolutely irreducible, and
+$G$ fixes no projective point.
+
+The characteristic polynomials make the elementwise fixed-point counts
+transparent.  An involution has eigenspaces of dimensions one and two, and
+therefore fixes $1+(11+1)=13$ projective points.  An element of order three
+has characteristic polynomial
+$(T-1)(T^2+T+1)$; the quadratic factor is irreducible over $\F_{11}$, so it
+fixes one projective point.  An element of order five has three distinct
+eigenvalues in $\F_{11}$ because $5\mid10$, and hence fixes three projective
+points.
+
+It remains only to intersect these eigenspaces inside the standard proper
+subgroups of $A_5$.  Their numbers of conjugates follow from their
+normalizers. A $D_5$ retains one of the three $C_5$ eigenlines and exchanges
+the other two; an $S_3$ retains the unique $C_3$ eigenline; a $V_4$ has
+three simultaneous eigenlines; and its overgroup $A_4$ permutes those three
+and fixes none.  The standard subgroup classification of $A_5$ shows that
+these exhaust the possible nontrivial point stabilizers.  Here $D_5$ has
+order ten, and the last row counts points whose stabilizer is exactly the
+displayed subgroup type.
 \[
 \begin{array}{c|rrrrrr}
 H&A_4&D_5&S_3&C_5&V_4&C_3\\ \hline
@@ -682,9 +718,10 @@ H&A_4&D_5&S_3&C_5&V_4&C_3\\ \hline
 \text{points with stabilizer conjugate to }H&0&6&10&12&15&0
 \end{array}
 \]
-For the third row, a $D_5$ fixes one $C_5$ eigenline and exchanges the other
-two; the unique $C_3$ line is already fixed by its $S_3$ normalizer; and
-$A_4$ permutes the three $V_4$ eigenlines without fixing one.
+For the third row, the two exchanged $C_5$ eigenlines have exact stabilizer
+$C_5$; the unique $C_3$ line is already fixed by its $S_3$ normalizer; and
+the three $V_4$ eigenlines have exact stabilizer $V_4$ because $A_4$
+permutes them without fixing one.
 By orbit--stabilizer, the third row already gives the orbits of lengths
 $6$, $10$, $12$, and $15$. To account for the points with exact stabilizer
 $C_2$, observe that each involution lies in
@@ -772,6 +809,9 @@ $Q(s)=s_0s_2-s_1^2$.
 For a point $x\notin A$, its \emph{secant index} is the number of chords of
 $A$ through $x$; by the dictionary above, this is the number of
 weight-two leaders for each nonzero syndrome on the ray $x$.
+The following oracle is likewise derived from incidence identities; the
+syndrome enumeration in the formal package is an independent check of it,
+not an input to its proof.
 
 \begin{proposition}[Complete syndrome oracle and ambiguity enumerator]
 \label{prop:decoding-oracle}
@@ -800,10 +840,19 @@ twenty three-element coordinate supports.
 The DMP dictionary identifies weight-one directions with the six columns,
 weight at most two with the secant union, and weight three with its
 complement.  Proposition~\ref{prop:deep-holes-conic} identifies the last
-set with $Q=0$, proving the oracle.  In the notation of its proof, the
-chord-intersection equations give
-$(n_0,n_1,n_2,n_3)=(12,90,15,10)$, where $n_i$ counts
-projective directions of secant index $i$ and $n_0$ is the uncovered locus.
+set with $Q=0$, proving the oracle.  For completeness, the ambiguity counts
+come from three incidence equations rather than a syndrome table.  If
+$n_i$ counts off-arc points of secant index $i$, then
+\[
+ n_0=12,\qquad n_1+n_2+n_3=133-6-12=115,
+\]
+while chord--point and disjoint-chord-pair incidence give
+\[
+ n_1+2n_2+3n_3=15(11-1)=150,
+ \qquad n_2+3n_3=3\binom64=45.
+\]
+Dye's ten Brianchon points give $n_3=10$, and hence
+$(n_0,n_1,n_2,n_3)=(12,90,15,10)$.
 Every direction has
 ten nonzero affine syndromes.  Thus the distance-two cosets contribute
 $900$ cases of multiplicity one, $150$ of multiplicity two, and $100$ of
@@ -1309,10 +1358,13 @@ up to scalar, the Clebsch diagonal cubic
 \]
 This cubic surface is smooth: at a singular point the five squares
 $z_i^2$ would be equal, but a sum of five signs cannot vanish in
-characteristic zero.  Proposition~10 of Hassett and Tschinkel now applies
-to the trace-orthogonal pair of matrix spaces and shows that
-$\det(\Phi_x)=0$ has exactly six ordinary double points in general linear
-position~\cite[\S3, Proposition~10]{HassettTschinkel2010}.
+characteristic zero.  Here the cross-golden four-space $\Lambda$ and its
+trace orthogonal $\Lambda^\perp$ define exactly the paired determinantal
+hypersurfaces of Hassett and Tschinkel.  Their Proposition~10 therefore
+applies: smoothness of the cubic surface $\mathbf P(\Lambda)\cap\Sigma_2$
+implies that $\det(\Phi_x)=0$ in $\mathbf P(\Lambda^\perp)$ has exactly six
+ordinary double points in linear general position
+\cite[\S3, Proposition~10]{HassettTschinkel2010}.
 
 Pair balance makes each $p_a=[\mathbf1-6e_a]$ singular, and these six
 points already form a projective frame.  They are therefore the complete
@@ -1343,18 +1395,16 @@ as its kernels.  Its induced form on the four-dimensional projective tangent
 space is nondegenerate, so every singularity is an ordinary double point.
 
 \paragraph{Frame symmetry.}
-The six points form a projective frame.  Every projective automorphism of
-the cubic permutes this complete frame, and each frame permutation has a
-unique projective extension.  The recovered switching class is the
-six-point regular two-graph.  In the gauge $B_{0i}=1$ it is equivalently a
-pentagon on the other five vertices.  Normalizing in turn at each vertex
-identifies the six axes with the six Sylow-$5$ subgroups of $A_5$.
-Consequently its permutation group is
-$N_{S_6}(A_5)\cong S_5$, of order $120$.  The sign on the two
-complementary triple orbits is its nontrivial quotient character; its
-kernel is the already constructed $A_5$.  Hence the cubic line has
-stabilizer $S_5$ and the oriented cubic has stabilizer $A_5$, without a
-separate signed-permutation enumeration.
+The node frame identifies every projective cubic automorphism with a frame
+permutation.  Let $N\le S_6$ normalize the five matchings $\mathcal T$ in
+Figure~\ref{fig:synthematic-petersen}.  Its action on $\mathcal T$ is
+faithful, and the displayed table supplies normalizers inducing generators
+of $A_5$ and an odd permutation; hence $N\cong S_5$.  The even generators
+preserve every $c_{ijk}$ and the odd element reverses them all.  Moreover,
+the identity and the five transpositions $(0\,i)$ give six distinct cubic
+lines.  Thus the line stabilizer has order at most $720/6=120$ and equals
+$N$; its orientation character is the sign on $\mathcal T$.  The cubic-line
+and oriented-cubic stabilizers are therefore $S_5$ and $A_5$.
 
 \paragraph{The integral commutant.}
 Finally, after extension from $\mathbf Q$ to
@@ -1400,41 +1450,48 @@ associated-conic results supply the classical Clebsch geometry
 \cite[Theorems~2--3, pp.~276--278]{Dye1991}.  The even-order oval
 obstruction uses the standard nucleus theorem
 \cite[p.~177]{Hirschfeld1998}.  The upper conic-filling bound is
-Proposition~1.5 of Blokhuis, Brouwer, and Sz\H{o}nyi~\cite{BBS2010}.
+Proposition~1.6 of Blokhuis, Brouwer, and Sz\H{o}nyi~\cite{BBS2010}.
 Cheltsov, Tschinkel, and Zhang supply a published $S_5$-symmetric equation
 inside their classification of cubics already assumed to be six-nodal.
 Section~\ref{sec:orientation-two-graph} gives the explicit coordinate
 identification, but does not use that citation to transfer singular-locus
-completeness.  That transfer instead uses the exact converse in
-Hassett--Tschinkel: a trace-orthogonal determinantal cubic threefold has six
-ordinary nodes precisely when its dual cubic surface is smooth
+completeness.  That transfer instead uses the equivalence in
+Hassett--Tschinkel for the determinantal hypersurfaces attached to a
+four-space in $\operatorname{End}(V)$ and its trace orthogonal: the cubic
+threefold has six ordinary nodes in linear general position precisely when
+the paired cubic surface is smooth
 \cite[\S3, Proposition~10]{HassettTschinkel2010}.
 
 The line bound, chord-defect identity, partial-cover deduction, decoder
 reconstruction, support bipartition, and the orientation two-graph
 reconstruction are proved in the text.  In particular, the conference
-identity gives pair balance and the Hessian ranks, while the pentagon model
-gives the $S_5/A_5$ stabilizer distinction.  The golden cross block, its
+identity gives pair balance and the Hessian ranks, while the five-matching
+normalizer and six-coset bound give the $S_5/A_5$ stabilizer distinction.
+The golden cross block, its
 four-dimensional trace complement, and the smooth Clebsch dual surface put
 the cubic under the cited determinantal theorem, so singular-locus
 completeness is structural.  The paper-owned replay independently constructs
-the $A_5/C_5$ and $A_5/D_5$ actions, the signed operator, its triangle
-products and diagonal pencil, the cross-golden determinant and its
-trace-orthogonal dual, the balanced switching class, the five gradient ideals,
-and the six Hessian blocks.  The gradient-ideal exhaustion is now an
-independent exact check rather than the proof of completeness.
-It reads no
-later-paper artifact:
+the coset actions, signed operator, triangle products, diagonal pencil,
+cross-golden trace dual, switching class, gradient ideals, and Hessian blocks.
+The gradient exhaustion is independent rather than the proof of completeness.
+It reads no later-paper artifact:
 \begin{center}
 \small\path{check_orientation_two_graph.py}.
 \end{center}
-The formal gate checks the displayed q11 code and decoder tables, the
-symmetry-free rigidity implication, the chord-defect specialization, the
-$q=9$ distance-two obstruction, and the small-arc moment consequences.  It
-treats Dye's Brianchon bound and equality classification as two explicit
-axioms.  It does not claim the orientation theorem or certify any exhaustive
-search in the computational companion; those retain the human and finite
-proof modes stated there.  The reusable Lean development is distributed in
+None of the preceding manuscript conclusions is imported from the formal
+development.  After the structural proofs are complete, the formal gate
+independently rederives the displayed q11 code and decoder conclusions, the
+causal containing-quadratic rigidity spine, the projective-to-code correspondence,
+the chord-defect specialization, the $q=9$ obstruction, the small-arc moments,
+and the eight orientation mechanisms from the antipodal cover through the
+rational and integral commutants.  Dye's bound and classification remain two
+explicit axioms.  The commutant theorems instead take an explicit
+proposition-valued interface for the classical conjugate $3+3'$ decomposition,
+Schur's lemma, and Galois descent; Lean checks golden equivariance, the reverse
+containment, and the diagonal/off-diagonal integral test.  The generated q11
+rows are finite leaves internal to this redundant cross-check; they are not
+premises of the orbit--stabilizer or incidence proofs above.  The companion
+searches lie outside this gate.  The reusable Lean development is distributed in
 \href{https://github.com/tavisrudd/finitegeom}{\texttt{finitegeom}}, while
 the generated q11 tables and aggregate Paper I gate are in
 \href{https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates}
@@ -1446,9 +1503,9 @@ Its pinned artifacts are
 \begin{center}
 \small
 certificate-package commit:
-\path{42ab1a2db30178cf23aa8393d886c63ded24bfbd}\\
+\path{09d8e174880e7370966da788da3c5d303df8af4f}\\
 base-library commit:
-\path{ef6317c5e1a348a91a1928104f9c8e1831bfb03d}\\
+\path{570086982b26075a71a331a81bb1b519e9a27e7f}\\
 aggregate gate:
 \path{RelativeConicArcs/Gates/ClebschRigidityTrust.lean}\\
 Mathlib commit:
@@ -1461,13 +1518,15 @@ The SHA-256 digest of \path{verification/checker_outputs.json} is
 The SHA-256 digest of
 \path{RelativeConicArcs/Gates/ClebschRigidityTrust.lean} is
 \begin{center}
-\small\path{45056ea72f225ce373d774ed274f4d0216b38c21fb57c26dfc5c84b0a2ef413b}.
+\small\path{c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747}.
 \end{center}
 This formalization is an
 independent cross-check, not a proof dependency of the manuscript.  Its
 recorded axiom audit lists the standard logical axioms and exactly the two
 Dye axioms above for the rigidity implication; the gate uses neither
-admitted declarations nor native execution.
+admitted declarations nor native execution.  Because the classical $3+3'$
+input is a theorem parameter rather than a global axiom, the trust manifest
+records that interface beside the two commutant terminals.
 
 \section{Conclusion}
 
@@ -1636,6 +1695,27 @@ S.-L.~Ng and P.~R.~Wild,
 T.~Rudd,
 \newblock Computational strengthenings of Clebsch syndrome rigidity,
 \newblock companion manuscript, 2026.
+
+\bibitem{RuddFactorization2026}
+T.~Rudd,
+\newblock Quadratic trade rigidity and cubic orientation in conic matching
+quotients,
+\newblock Paper~II, released manuscript, version 2, 2026,
+\newblock \href{https://doi.org/10.5281/zenodo.21682217}
+{doi:10.5281/zenodo.21682217}.
+
+\bibitem{RuddPassages2026}
+T.~Rudd,
+\newblock Arithmetic and harmonic realizations of the Clebsch cubic,
+\newblock Paper~III (\emph{passages}), released manuscript, version 2, 2026,
+\newblock \href{https://doi.org/10.5281/zenodo.21682515}
+{doi:10.5281/zenodo.21682515}.
+
+\bibitem{RuddPassant2026}
+T.~Rudd,
+\newblock A binary $[78,36,12]$ code from the passant lines of a conic over
+$\F_{13}$,
+\newblock Paper~IV, forthcoming, 2026.
 
 \bibitem{StormeThas1991}
 L.~Storme and J.~A.~Thas,
