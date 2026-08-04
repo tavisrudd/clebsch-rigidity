@@ -16,7 +16,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic": [
@@ -64,7 +64,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
@@ -113,7 +113,7 @@
         }
       ],
       "id": "rigidity-headline",
-      "paper_location": "source line 91",
+      "paper_location": "source line 96",
       "route": "mixed",
       "row": 2,
       "source": {
@@ -138,7 +138,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.Examples.Q11A5PointOrbits.brianchon_points_one_orbit": [
@@ -165,7 +165,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.Examples.Q11A5PointOrbits.point_orbit_partition",
@@ -186,7 +186,7 @@
         }
       ],
       "id": "prop-a5-point-orbits",
-      "paper_location": "source line 661",
+      "paper_location": "source line 921",
       "route": "mixed",
       "row": 11,
       "source": {
@@ -213,7 +213,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic": [
@@ -235,7 +235,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.Examples.Q11Coding.witness_mds_columns",
@@ -280,7 +280,7 @@
         }
       ],
       "id": "prop-deep-holes-conic",
-      "paper_location": "source line 617",
+      "paper_location": "source line 877",
       "route": "mixed",
       "row": 12,
       "source": {
@@ -296,7 +296,7 @@
         "Hirschfeld 1998, the plane arc/covering-radius dictionary"
       ],
       "id": "cor-named-variety",
-      "paper_location": "source line 634",
+      "paper_location": "source line 894",
       "route": "conceptual-cited-inputs",
       "row": 13,
       "source": {
@@ -344,7 +344,7 @@
         }
       ],
       "id": "prop-deep-hole-orbit",
-      "paper_location": "source line 763",
+      "paper_location": "source line 1023",
       "route": "mixed",
       "row": 14,
       "source": {
@@ -370,7 +370,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts": [
@@ -402,7 +402,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact",
@@ -471,7 +471,7 @@
         }
       ],
       "id": "prop-decoding-oracle",
-      "paper_location": "source line 818",
+      "paper_location": "source line 1078",
       "route": "mixed",
       "row": 15,
       "source": {
@@ -518,7 +518,7 @@
         }
       ],
       "id": "lem-six-arc-line-bound",
-      "paper_location": "source line 349",
+      "paper_location": "source line 576",
       "route": "mixed",
       "row": 16,
       "source": {
@@ -536,14 +536,14 @@
           ],
           "route": "conceptual-cited-inputs",
           "subclaim": "degenerate-conic reduction and Dye equality boundary",
-          "unconditional_remainder": "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, and proves the chord-defect identity independently."
+          "unconditional_remainder": "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, proves the chord-defect identity independently, and derives the single-orbit statement relative to a fixed conic from Bezout."
         },
         {
           "lean": {
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic": [
@@ -591,7 +591,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
@@ -614,14 +614,14 @@
           "subclaim": "containing-quadratic rigidity implication"
         }
       ],
-      "id": "thm-rigidity",
-      "paper_location": "source line 138",
+      "id": "thm-rigidity+cor-conic-stabilizer-orbit",
+      "paper_location": "source line 143",
       "route": "mixed",
       "row": 17,
       "source": {
-        "id": "thm:rigidity",
+        "id": "thm:rigidity+cor:conic-stabilizer-orbit",
         "kind": "theorem-environment",
-        "sha256": "49282b0388745dbd71076010b8e0db376255306a903eb723e76f174285266f69"
+        "sha256": "8123932d99110b357477ba025a1e658a7190fbf1efcc8ae28ab0189d08f66794"
       },
       "trust_boundary": "The manuscript handles degenerate conics by the proved line bound; Lean checks the nonsingular-conic implication relative to Dye's two declared consequences."
     },
@@ -633,7 +633,7 @@
               {
                 "path": "verification/build_finite_census_certificates.py",
                 "repository": "paper",
-                "sha256": "5ab3f74d40b4c2565f2405974c6cefdc9217bdbf651b7e74266b4566bd1662b2"
+                "sha256": "58975c6fdd519478177827e9450b4d8d470de16d69a34c32214ec957300610b6"
               }
             ],
             "checker_commands": [
@@ -686,7 +686,7 @@
         }
       ],
       "id": "prop-low-degree-rigidity",
-      "paper_location": "source line 211",
+      "paper_location": "source line 219",
       "route": "mixed",
       "row": 18,
       "source": {
@@ -712,7 +712,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschDye.deepHoleLocus_rigidifies_witnessCode": [
@@ -726,7 +726,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschDye.deepHoleLocus_rigidifies_witnessCode"
@@ -744,7 +744,7 @@
         }
       ],
       "id": "cor-monomial-characterization",
-      "paper_location": "source line 237",
+      "paper_location": "source line 245",
       "route": "mixed",
       "row": 19,
       "source": {
@@ -762,7 +762,7 @@
               {
                 "path": "verification/build_finite_census_certificates.py",
                 "repository": "paper",
-                "sha256": "5ab3f74d40b4c2565f2405974c6cefdc9217bdbf651b7e74266b4566bd1662b2"
+                "sha256": "58975c6fdd519478177827e9450b4d8d470de16d69a34c32214ec957300610b6"
               }
             ],
             "checker_commands": [
@@ -815,7 +815,7 @@
         }
       ],
       "id": "thm-gap",
-      "paper_location": "source line 269",
+      "paper_location": "source line 277",
       "route": "mixed",
       "row": 20,
       "source": {
@@ -823,7 +823,7 @@
         "kind": "theorem-environment",
         "sha256": "c11a7fa262929336dc9123b35a669cae91360dd3baa3b0a8cd8e72b1623962d5"
       },
-      "trust_boundary": "Orbit masses, concurrence counts, and chord defect certify the fifteen uncovered sizes. The absence of a nearer conic remains a trusted exhaustive execution over all 160,930 nonsingular conics; qualitative rigidity is routed separately in row 17."
+      "trust_boundary": "Orbit masses, concurrence counts, and chord defect certify the fifteen uncovered sizes. Qualitative rigidity is routed separately in row 17, which makes the exhaustive conic-distance execution redundant; it is retained as reported computation over all 160,930 nonsingular conics rather than as a claim."
     },
     {
       "cited_inputs": [
@@ -831,7 +831,7 @@
         "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and Theorem 3, page 278"
       ],
       "id": "prop-brianchon-support",
-      "paper_location": "source line 951",
+      "paper_location": "source line 1211",
       "route": "conceptual-cited-inputs",
       "row": 21,
       "source": {
@@ -858,7 +858,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts": [
@@ -890,7 +890,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact",
@@ -912,7 +912,7 @@
         }
       ],
       "id": "cor-decoder-brianchon",
-      "paper_location": "source line 1001",
+      "paper_location": "source line 1261",
       "route": "mixed",
       "row": 22,
       "source": {
@@ -999,7 +999,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.PaperIOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive": [
@@ -1061,6 +1061,16 @@
                 "propext",
                 "Quot.sound"
               ],
+              "RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
+              "RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses": [
+                "propext",
+                "Classical.choice",
+                "Quot.sound"
+              ],
               "RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes": [
                 "propext",
                 "Classical.choice",
@@ -1110,8 +1120,7 @@
                 "propext",
                 "Classical.choice",
                 "Quot.sound"
-              ],
-              "RelativeConicArcs.PaperIOrientationTraceDual.hassettTschinkel_six_nodes_of_traceDual": []
+              ]
             },
             "conditional_interfaces": [
               "The proposition-valued interface RelativeConicArcs.PaperIOrientationCommutant.ClassicalOddA5ThreePlusThreeSplitting supplies the classical conjugate 3+3' decomposition, Schur-lemma upper containment, and Galois descent."
@@ -1119,7 +1128,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.PaperIOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine",
@@ -1139,7 +1148,8 @@
               "RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal",
               "RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic",
               "RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic",
-              "RelativeConicArcs.PaperIOrientationTraceDual.hassettTschinkel_six_nodes_of_traceDual",
+              "RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval",
+              "RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses",
               "RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame",
               "RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes",
               "RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B",
@@ -1159,13 +1169,13 @@
         }
       ],
       "id": "prop-invariant-support-bipartition+thm-orientation-two-graph+cor-orientation-cubic-geometry",
-      "paper_location": "source line 1017",
+      "paper_location": "source line 1277",
       "route": "mixed",
       "row": 23,
       "source": {
         "id": "prop:invariant-support-bipartition+thm:orientation-two-graph+cor:orientation-cubic-geometry",
         "kind": "theorem-environment",
-        "sha256": "27cb60b94cdeb3a46f222657fde7b944bc01d11ee09ca91dc704e6f7cfc52b81"
+        "sha256": "54a5a78c75a42f50c7ace57ad8bc610fdea522c24f230f230c1813c226a25d65"
       },
       "trust_boundary": "The support bipartition and intrinsic orientation theorem have complete human proofs. The exact replay checks every finite identity independently. Lean kernel-checks the eight-step orientation spine; the two commutant equalities use the explicitly recorded classical 3+3' splitting interface."
     },
@@ -1193,7 +1203,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments": [
@@ -1210,7 +1220,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
@@ -1241,7 +1251,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card": [
@@ -1258,7 +1268,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
@@ -1276,16 +1286,16 @@
           "subclaim": "Sylvester distance-two clique obstruction"
         }
       ],
-      "id": "lem-chord-defect+cor-conic-filling-window+lem-q9-polarity",
+      "id": "lem-chord-defect+prop-concurrence-spectrum+cor-conic-filling-window+lem-q9-polarity",
       "paper_location": "source line 81",
       "route": "mixed",
       "row": 24,
       "source": {
-        "id": "lem:chord-defect+cor:conic-filling-window+lem:q9-polarity",
+        "id": "lem:chord-defect+prop:concurrence-spectrum+cor:conic-filling-window+lem:q9-polarity",
         "kind": "theorem-environment",
-        "sha256": "6eea9df631a67dd530f5965d9cbc2724d04cf7aae7144b54787c07f0da45bbdf"
+        "sha256": "a232a350d24bdf85b845d3041f5bfd5c01f9673a962aa127b354ac395c352dd2"
       },
-      "trust_boundary": "The manuscript proves the universal chord-defect identity, quadratic barrier, even-order oval obstruction, and passant window and applies the cited partial-cover theorem; Lean checks the six-arc specialization and an explicit Sylvester distance-two clique certificate."
+      "trust_boundary": "The manuscript proves the universal chord-defect identity, the odd-order concurrence spectrum, the quadratic barrier, the even-order oval obstruction, and the passant window, and applies the cited partial-cover theorem; Lean checks the six-arc specialization and an explicit Sylvester distance-two clique certificate."
     },
     {
       "components": [
@@ -1304,7 +1314,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card": [
@@ -1321,7 +1331,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
@@ -1365,7 +1375,7 @@
         }
       ],
       "id": "thm-why11",
-      "paper_location": "source line 339",
+      "paper_location": "source line 350",
       "route": "mixed",
       "row": 25,
       "source": {
@@ -1383,14 +1393,14 @@
           ],
           "route": "conceptual-cited-inputs",
           "subclaim": "Clebsch-family chord count and associated-conic inclusion",
-          "unconditional_remainder": "The manuscript derives the polynomial from the ten-Brianchon equality and uses Dye's edge criterion for the associated-conic inclusion."
+          "unconditional_remainder": "The manuscript normalizes the equality configuration over Z[phi], derives the polynomial from the ten-Brianchon equality, and uses Dye's edge criterion for the associated-conic inclusion."
         },
         {
           "lean": {
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula": [
@@ -1400,7 +1410,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula"
@@ -1442,16 +1452,16 @@
           "subclaim": "q=19 specialization"
         }
       ],
-      "id": "prop-clebsch-family-uncovered",
-      "paper_location": "source line 512",
+      "id": "prop-golden-normal-form+prop-clebsch-family-uncovered",
+      "paper_location": "source line 299",
       "route": "mixed",
       "row": 26,
       "source": {
-        "id": "prop:clebsch-family-uncovered",
+        "id": "prop:golden-normal-form+prop:clebsch-family-uncovered",
         "kind": "theorem-environment",
-        "sha256": "4c80b78f56a7acb84cafc60cbbd7b2995489098be1c2304ddad496e25ebed5dc"
+        "sha256": "2f525c1ed925bd5d5862d157ff3477738429f2857ea8e8a48c92e9150a169be2"
       },
-      "trust_boundary": "The all-field formula is conceptual; q=19 is checked by an independent exact specialization."
+      "trust_boundary": "The golden normal form and the all-field formula are conceptual; q=19 is checked by an independent exact specialization."
     },
     {
       "components": [
@@ -1488,7 +1498,7 @@
             "audit": {
               "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
               "repository": "lean",
-              "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+              "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
             },
             "axioms": {
               "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card": [
@@ -1515,7 +1525,7 @@
             "gate": {
               "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
               "repository": "lean",
-              "sha256": "c5d532dbd79dcb2eef602ced85105b72943a0a1af05de11c3c008c1ed9a1d747"
+              "sha256": "4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319"
             },
             "terminals": [
               "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card",
@@ -1538,28 +1548,28 @@
           "computation": {
             "artifacts": [
               {
-                "path": "verification/c723_q13_weight10_profiles.py",
+                "path": "verification/q13_weight10_profiles.py",
                 "repository": "paper",
-                "sha256": "96e95067a3ce8f0f69180c6d78049ddf94905091640a07dfe366234fd383dd78"
+                "sha256": "9172d34d3e0f8d1066eb7b2d6b9839bf0c5c02ac2c6061b4344858d057326226"
               },
               {
-                "path": "verification/c723_q13_weight10_independent.py",
+                "path": "verification/q13_weight10_independent.py",
                 "repository": "paper",
-                "sha256": "6cafb6ec9fc18feda15a3e0d9ab324b8e00b19d2f6281c822d84d22980f701a5"
+                "sha256": "1301cf60e0b7d89684bea192d0b6cce7beb87dfd47ed7da6d31eeb32f795700f"
               }
             ],
             "checker_commands": [
               {
                 "argv": [
                   "python3",
-                  "verification/c723_q13_weight10_profiles.py",
+                  "verification/q13_weight10_profiles.py",
                   "--check"
                 ]
               },
               {
                 "argv": [
                   "python3",
-                  "verification/c723_q13_weight10_independent.py"
+                  "verification/q13_weight10_independent.py"
                 ]
               }
             ],
@@ -1569,9 +1579,9 @@
             "soundness_bridge": "Canonical disjoint sets of partial 78-bit XOR syndromes exclude zero; a differently split full-fibre dynamic program checks the same domains.",
             "supporting_artifacts": [
               {
-                "path": "verification/c723_q13_weight10_profiles.json",
+                "path": "verification/q13_weight10_profiles.json",
                 "repository": "paper",
-                "sha256": "aebe48e831c9da14c33e3bf1ec1156ba8a7e0ee8bbe676b413e528fb83e87ff9"
+                "sha256": "396bd914ee21e8fe07a6ebbd77f71baf5e59ec2c2dd23c522a7973118640b30e"
               }
             ]
           },
@@ -1609,7 +1619,7 @@
               {
                 "path": "verification/build_finite_census_certificates.py",
                 "repository": "paper",
-                "sha256": "5ab3f74d40b4c2565f2405974c6cefdc9217bdbf651b7e74266b4566bd1662b2"
+                "sha256": "58975c6fdd519478177827e9450b4d8d470de16d69a34c32214ec957300610b6"
               }
             ],
             "checker_commands": [
@@ -1639,34 +1649,34 @@
           "computation": {
             "artifacts": [
               {
-                "path": "verification/c725_terminal_orbit_dag.py",
+                "path": "verification/terminal_orbit_dag.py",
                 "repository": "paper",
-                "sha256": "1935033475798f8fd38a37213cf5821100f2a669b68e7678881ef53cd06ddc6d"
+                "sha256": "d4eef9654c2f3ceb7ec48f3cba199a1a6490cafd3d1f3e4dd3f22c91b85c19b8"
               },
               {
-                "path": "verification/c725_terminal_orbit_dag_replay.py",
+                "path": "verification/terminal_orbit_dag_replay.py",
                 "repository": "paper",
-                "sha256": "070562160723ab83fe3a7a40b03b65622af3969329581d7d1ac9586303266afb"
+                "sha256": "e8357f4b875a9f803e63acff43dc1c7cdc658f527859849750baad26d52de4c3"
               }
             ],
             "checker_commands": [
               {
                 "argv": [
                   "python3",
-                  "verification/c725_terminal_orbit_dag.py"
+                  "verification/terminal_orbit_dag.py"
                 ]
               },
               {
                 "argv": [
                   "python3",
-                  "verification/c725_terminal_orbit_dag.py",
+                  "verification/terminal_orbit_dag.py",
                   "--check"
                 ]
               },
               {
                 "argv": [
                   "python3",
-                  "verification/c725_terminal_orbit_dag_replay.py",
+                  "verification/terminal_orbit_dag_replay.py",
                   "--check"
                 ]
               }
@@ -1677,14 +1687,14 @@
             "soundness_bridge": "Rooted transition masses and the global edge-coverage identity inductively cover every labelled arc; explicit six-point witnesses prove sharpness.",
             "supporting_artifacts": [
               {
-                "path": "verification/c725_terminal_orbit_dag.json.gz",
+                "path": "verification/terminal_orbit_dag.json.gz",
                 "repository": "paper",
-                "sha256": "8e18a337ed6a0c60633e8c3df901201fa08d1e04b1ad6d4d7e3aef04a6a111bd"
+                "sha256": "cb666c206dd797aef8f06b22f0c6aa61c58b6658f4a139ee271114c0c21f66c4"
               },
               {
-                "path": "verification/c725_terminal_orbit_dag_replay.json",
+                "path": "verification/terminal_orbit_dag_replay.json",
                 "repository": "paper",
-                "sha256": "ba9d31b9b428cc8d2efc171293f4c9bf1d3d607371dabccc6049cba5f6bdbdc6"
+                "sha256": "a8756a774074907553feb76f72e07df3e70c2c4ccdce3bf5cc442bd3c36fc3cc"
               }
             ]
           },
@@ -1749,16 +1759,16 @@
           "subclaim": "terminal eight-point exclusions"
         }
       ],
-      "id": "thm-q13-tangent-code+thm-small-k-conic-filling",
-      "paper_location": "source line 386",
+      "id": "thm-q13-tangent-code+lem-pencil-saturation+thm-small-k-conic-filling",
+      "paper_location": "source line 452",
       "route": "mixed",
       "row": 29,
       "source": {
-        "id": "thm:q13-tangent-code+thm:small-k-conic-filling",
+        "id": "thm:q13-tangent-code+lem:pencil-saturation+thm:small-k-conic-filling",
         "kind": "theorem-environment",
-        "sha256": "1445ccbd969d521672b167d475a9bf135ef30d3ada5b61ed10cb1e627ddceb8d"
+        "sha256": "4709b04f45ed4b9e59170057e422b8a36a003f088d1adc3f2db59e9f1fcdcb02"
       },
-      "trust_boundary": "Lean proves only the small-arc moment reductions. The q=13 saturated weight-eight exclusion and the orbit-span/automorphism conclusions have human structural proofs. Weight ten, the q=11/q=13 seven-arc leaves, and the sharp q=13,17,19 maximum-six assertion retain finite certificates; the minimum-layer classification remains trusted execution."
+      "trust_boundary": "Lean proves only the small-arc moment reductions. The named pencil-saturation lemma, the q=13 saturated weight-eight exclusion, and the orbit-span/automorphism conclusions have human structural proofs. Weight ten, the q=11/q=13 seven-arc leaves, and the sharp q=13,17,19 maximum-six assertion retain finite certificates; the minimum-layer classification remains trusted execution."
     },
     {
       "components": [
@@ -1768,7 +1778,7 @@
               {
                 "path": "verification/build_finite_census_certificates.py",
                 "repository": "paper",
-                "sha256": "5ab3f74d40b4c2565f2405974c6cefdc9217bdbf651b7e74266b4566bd1662b2"
+                "sha256": "58975c6fdd519478177827e9450b4d8d470de16d69a34c32214ec957300610b6"
               }
             ],
             "checker_commands": [
@@ -1832,7 +1842,7 @@
         }
       ],
       "id": "fifteen-class-census-table",
-      "paper_location": "source line 139",
+      "paper_location": "source line 140",
       "route": "mixed",
       "row": 58,
       "source": {
@@ -1848,7 +1858,7 @@
       {
         "path": "verification/build_finite_census_certificates.py",
         "repository": "paper",
-        "sha256": "5ab3f74d40b4c2565f2405974c6cefdc9217bdbf651b7e74266b4566bd1662b2"
+        "sha256": "58975c6fdd519478177827e9450b4d8d470de16d69a34c32214ec957300610b6"
       },
       {
         "path": "verification/finite_census_certificates.json",
@@ -1861,80 +1871,80 @@
         "sha256": "e9a9ccf8d9c80843c4b77d34e0b3735d887fe91cbbb62e71d94cf97ae881441f"
       },
       {
-        "path": "verification/c723_q13_weight10_profiles.py",
+        "path": "verification/q13_weight10_profiles.py",
         "repository": "paper",
-        "sha256": "96e95067a3ce8f0f69180c6d78049ddf94905091640a07dfe366234fd383dd78"
+        "sha256": "9172d34d3e0f8d1066eb7b2d6b9839bf0c5c02ac2c6061b4344858d057326226"
       },
       {
-        "path": "verification/c723_q13_weight10_profiles.json",
+        "path": "verification/q13_weight10_profiles.json",
         "repository": "paper",
-        "sha256": "aebe48e831c9da14c33e3bf1ec1156ba8a7e0ee8bbe676b413e528fb83e87ff9"
+        "sha256": "396bd914ee21e8fe07a6ebbd77f71baf5e59ec2c2dd23c522a7973118640b30e"
       },
       {
-        "path": "verification/c723_q13_weight10_independent.py",
+        "path": "verification/q13_weight10_independent.py",
         "repository": "paper",
-        "sha256": "6cafb6ec9fc18feda15a3e0d9ab324b8e00b19d2f6281c822d84d22980f701a5"
+        "sha256": "1301cf60e0b7d89684bea192d0b6cce7beb87dfd47ed7da6d31eeb32f795700f"
       },
       {
-        "path": "verification/c725_terminal_orbit_dag.py",
+        "path": "verification/terminal_orbit_dag.py",
         "repository": "paper",
-        "sha256": "1935033475798f8fd38a37213cf5821100f2a669b68e7678881ef53cd06ddc6d"
+        "sha256": "d4eef9654c2f3ceb7ec48f3cba199a1a6490cafd3d1f3e4dd3f22c91b85c19b8"
       },
       {
-        "path": "verification/c725_terminal_orbit_dag.json.gz",
+        "path": "verification/terminal_orbit_dag.json.gz",
         "repository": "paper",
-        "sha256": "8e18a337ed6a0c60633e8c3df901201fa08d1e04b1ad6d4d7e3aef04a6a111bd"
+        "sha256": "cb666c206dd797aef8f06b22f0c6aa61c58b6658f4a139ee271114c0c21f66c4"
       },
       {
-        "path": "verification/c725_terminal_orbit_dag_replay.py",
+        "path": "verification/terminal_orbit_dag_replay.py",
         "repository": "paper",
-        "sha256": "070562160723ab83fe3a7a40b03b65622af3969329581d7d1ac9586303266afb"
+        "sha256": "e8357f4b875a9f803e63acff43dc1c7cdc658f527859849750baad26d52de4c3"
       },
       {
-        "path": "verification/c725_terminal_orbit_dag_replay.json",
+        "path": "verification/terminal_orbit_dag_replay.json",
         "repository": "paper",
-        "sha256": "ba9d31b9b428cc8d2efc171293f4c9bf1d3d607371dabccc6049cba5f6bdbdc6"
+        "sha256": "a8756a774074907553feb76f72e07df3e70c2c4ccdce3bf5cc442bd3c36fc3cc"
       },
       {
-        "path": "verification/c725_terminal_orbit_dag.sha256",
+        "path": "verification/terminal_orbit_dag.sha256",
         "repository": "paper",
-        "sha256": "96bf23dcadcc391995e596559bb2b77a7cc7a7c1d3d22b620769039f55e879b9"
+        "sha256": "a99f37c7c6c62f1d0966987507964bede42c204e57c9fe95f5c9c5a5b7bc3db6"
       }
     ],
     "finite_boundary_manifest": {
-      "path": "verification/c725_finite_boundary_manifest.json",
+      "path": "verification/finite_boundary_manifest.json",
       "repository": "paper",
-      "sha256": "cfad5275c75424b7c3a29b0189e9be17b3c241687b7cda7528293d59e31d3204"
+      "sha256": "c8b106d98036183841b782a566b7f8fbeb8965bbed94e9778523f0794f057798"
     },
     "manuscript": {
       "path": "clebsch_rigidity_computational_companion.tex",
       "repository": "paper",
-      "sha256": "0e03ae223ef4f43652e23fa81463d736a6e73bd1dfb42f1cf54b726a1acdaeb5"
+      "sha256": "997f4c42550b7fae1ff6eceb27dcce1f4d9643a1d074c78940d71307a6f9d128"
     },
     "pdf": {
       "path": "clebsch_rigidity_computational_companion.pdf",
       "repository": "paper",
-      "sha256": "8984dd447afe827d586d30e998c6bcd592b2d5a7fc139d955d6b8c3daa9cd57f"
+      "sha256": "b70a126b4b85264a5c39bd45ae22759e6096fd51d24d18f8ebfc4edf58802534"
     },
     "trust_ledger": {
       "path": "verification/computational_companion_trust.json",
       "repository": "paper",
-      "sha256": "0e602c27957fbad44a14d6471e74348937591f3a3ab75075305afdfc122160ff"
+      "sha256": "884603c4596e2827acae3c9b26a5e43fa2bd2808c664438fd5f833d7ff19d90a"
     }
   },
   "lean_repository": {
-    "commit": "09d8e174880e7370966da788da3c5d303df8af4f",
+    "commit": "9c5d474f502a5ae8e189bc9fdf0fffa7ab96e0c5",
     "distribution": "separate shared Git repository",
-    "finitegeom_commit": "570086982b26075a71a331a81bb1b519e9a27e7f",
+    "finitegeom_commit": "85dfde9e13e6c3d004e0e659fb83c1a4761902d0",
     "path": ".",
     "url": "https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates"
   },
   "manuscript_pdf": {
     "path": "clebsch_rigidity.pdf",
     "repository": "paper",
-    "sha256": "326b3b2f20e1d9e9612ba88424b8cc84e74ed463cec0bba5788b750d72d7a9e8"
+    "sha256": "d98ecd6b07992041ae3ae2da42e4b62fe02cba5662eff5e7e5bfd9cf0f15ba94"
   },
-  "manuscript_sha256": "2ae7d6269e37e2c27254e9e8ad72fb6c28637017e92f46265cd5137b3873049c",
+  "manuscript_sha256": "d397627020899d86938ad46ac99d508d6032fddb101e0ce0a860ba9bc38dd058",
   "public_documents": [
     {
       "path": "README.md",
@@ -1944,7 +1954,7 @@
     {
       "path": "verification/README.md",
       "repository": "paper",
-      "sha256": "e9393793d255ca53cb4dd6c9ab7cc84a68d3c3a4037742fbef5a3f3c0e1aba55"
+      "sha256": "4e3e8f687d50b60b01356b30580ebed1493f67965af822c59c1e51f4b22d9211"
     }
   ],
   "reproducibility_environment": {
@@ -1974,19 +1984,19 @@
   "statement_identity": {
     "path": "verification/statement_identity.json",
     "repository": "paper",
-    "sha256": "2625354559053f9e8c6c802ac337b40dc42f68da8e8d8df6c60ea5fd4375c449"
+    "sha256": "3c02c7071cdceae97f24c79bb96713bc657b1ebaa0847e0308568914054d976e"
   },
   "verify_all": {
     "checker_output_certificate": {
       "generator": {
         "path": "verification/capture_checker_outputs.py",
         "repository": "paper",
-        "sha256": "ec57c9af91a35d1d2b7c3b2ce37c60e10214f3ffdde5ff403716ad3d09f2e333"
+        "sha256": "5b3494cfd89fda4683492c42a47e186fec9ebbd043cdca6abdf73008f2ce4a9c"
       },
       "output": {
         "path": "verification/checker_outputs.json",
         "repository": "paper",
-        "sha256": "cd4386336e06e11c9e2aa3228c18e828ad216bc78fd05f7387502ab6a06d0e04"
+        "sha256": "36ab223c1d92cf4bd82a2e52f830b37faa03e7405d3fb742bb1bb3cdc4d76d7a"
       }
     },
     "checks": [
@@ -2243,21 +2253,21 @@
       {
         "argv": [
           "python3",
-          "verification/c723_q13_weight10_profiles.py",
+          "verification/q13_weight10_profiles.py",
           "--check"
         ],
         "cwd": ".",
         "id": "check-q13-weight-ten-certificate",
         "repository": "paper",
-        "stdout_bytes": 118,
+        "stdout_bytes": 113,
         "stdout_lines": 1,
-        "stdout_sha256": "5802c4f7be53ca807ff7ffa5252d8b902b2c6fdf85b02ed8279373c3510fced4",
+        "stdout_sha256": "592b7be77d59021982a6d793f282b01feb4ac36f8a4d9e6a2c2e343fdf66d24e",
         "timeout_seconds": 900
       },
       {
         "argv": [
           "python3",
-          "verification/c723_q13_weight10_independent.py"
+          "verification/q13_weight10_independent.py"
         ],
         "cwd": ".",
         "id": "check-q13-weight-ten-independent",
@@ -2270,7 +2280,7 @@
       {
         "argv": [
           "python3",
-          "verification/c725_terminal_orbit_dag.py"
+          "verification/terminal_orbit_dag.py"
         ],
         "cwd": ".",
         "id": "check-terminal-orbit-dag-direct",
@@ -2283,21 +2293,21 @@
       {
         "argv": [
           "python3",
-          "verification/c725_terminal_orbit_dag.py",
+          "verification/terminal_orbit_dag.py",
           "--check"
         ],
         "cwd": ".",
         "id": "check-terminal-orbit-dag-regeneration",
         "repository": "paper",
-        "stdout_bytes": 42,
+        "stdout_bytes": 37,
         "stdout_lines": 1,
-        "stdout_sha256": "d831b031cd978306a1daa84dca61afdd14244045cedfd3c9f3b1f18c33aec262",
+        "stdout_sha256": "b067b767d882787c3469b618e6ec49bd5dfca3c587ffa2c28a065c1395716080",
         "timeout_seconds": 900
       },
       {
         "argv": [
           "python3",
-          "verification/c725_terminal_orbit_dag_replay.py",
+          "verification/terminal_orbit_dag_replay.py",
           "--check"
         ],
         "cwd": ".",
@@ -2322,7 +2332,7 @@
         "axiom_audit": {
           "path": "verification/clebsch_rigidity_trust/axiom-audit.txt",
           "repository": "lean",
-          "sha256": "67556c40135f49a37d2ef9326c6af083ec3fdc04c52ec823bda8b7d15d74c568"
+          "sha256": "7ce0a3c522909588e3011b21b41cd683ee85bcff598469bc84d5dc74c46f458e"
         },
         "cwd": ".",
         "id": "lean-rigidity-trust-gate",
@@ -2339,18 +2349,18 @@
     "output": {
       "path": "verification/verify-release-output.json",
       "repository": "paper",
-      "sha256": "df7fbdf46c8d3e53ad765c0412b453b5e0a5ae0c573a5cec2a2577e38516cc71"
+      "sha256": "acae75cc4e9f39b95c8917b3489dcfb4c8d882b3b4e9161533f756c404561e2c"
     },
     "verification_tools": [
       {
         "path": "verification/extract_statement_identity.py",
         "repository": "paper",
-        "sha256": "9bfbf66d1b18b7bc581273b29598a926f02f690ba9fd7dbbcf849cfce8a860f4"
+        "sha256": "bcbcbfad393623b9eade58e8ebacf236f186f2461b6fd00b5f292955c511b185"
       },
       {
         "path": "verification/build_trust_manifest.py",
         "repository": "paper",
-        "sha256": "a40d9c335e31f70f30f16890216d8ac7352a9ceb474041eab03474e40b439819"
+        "sha256": "9f791ecea493c3214a417f692a7a37efb252a1550e9647d1819c23c4ef34494c"
       },
       {
         "path": "verification/verify_trust_manifest.py",
@@ -2360,17 +2370,17 @@
       {
         "path": "verification/test_verification_tools.py",
         "repository": "paper",
-        "sha256": "3062a24b077de467ce37b655805b88dadaaf897c516714d71524ef52bace8bb1"
+        "sha256": "0de259a17abc4f144f7773fe46dabeba352b61da85d23013ab3809547f051bae"
       },
       {
         "path": "verification/check_manuscript_build.py",
         "repository": "paper",
-        "sha256": "19423f8b3ae5cf43bf6abbc464947b75554cbb6069bd3991ce237d4c551f9990"
+        "sha256": "f6cd748e00ba43472bc7987eeaf39ee9143b551a23d5663270c32cdf676b4a4e"
       },
       {
         "path": "verification/verify_computational_companion.py",
         "repository": "paper",
-        "sha256": "f5c6e88c840f95f8254c69c7686cf659d9fed53602b2cb79ae4f121f7028c6d5"
+        "sha256": "101809596aba775189b593ad877b8fb460c515153d89d98e94630175ac56ed7f"
       }
     ]
   }

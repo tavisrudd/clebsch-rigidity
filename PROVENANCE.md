@@ -1,6 +1,6 @@
 # Export provenance
 
-- Source snapshot commit: `3c5c72dd8c259cca10cf1a024caf4766277a1e85`
+- Source snapshot commit: `a41ca87bc8741a8b3945f9f2e228edfe664fe90c`
 - Repository identity: `tavisrudd/clebsch-rigidity`
 - Export method: deterministic, content-addressed source materialization.
 - File hashes and source blob identities are recorded in `export-manifest.json`.

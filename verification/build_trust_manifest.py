@@ -21,8 +21,8 @@ IDENTITY_PATH = PAPER_ROOT / "verification" / "statement_identity.json"
 OUTPUT_PATH = PAPER_ROOT / "verification" / "trust_manifest.json"
 GATE_PATH = "RelativeConicArcs/Gates/ClebschRigidityTrust.lean"
 AUDIT_PATH = "verification/clebsch_rigidity_trust/axiom-audit.txt"
-PINNED_LEAN_COMMIT = "09d8e174880e7370966da788da3c5d303df8af4f"
-PINNED_BASE_COMMIT = "570086982b26075a71a331a81bb1b519e9a27e7f"
+PINNED_LEAN_COMMIT = "9c5d474f502a5ae8e189bc9fdf0fffa7ab96e0c5"
+PINNED_BASE_COMMIT = "85dfde9e13e6c3d004e0e659fb83c1a4761902d0"
 
 
 TERMINALS = {
@@ -97,7 +97,8 @@ TERMINALS = {
         "RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal",
         "RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic",
         "RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic",
-        "RelativeConicArcs.PaperIOrientationTraceDual.hassettTschinkel_six_nodes_of_traceDual",
+        "RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval",
+        "RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses",
         "RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame",
         "RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes",
         "RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B",
@@ -495,7 +496,7 @@ def components_by_row(
         17: (
             "The manuscript handles degenerate conics by the proved line bound; Lean checks the nonsingular-conic implication relative to Dye's two declared consequences.",
             [
-                conceptual("degenerate-conic reduction and Dye equality boundary", CLASSICAL_DYE, "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, and proves the chord-defect identity independently."),
+                conceptual("degenerate-conic reduction and Dye equality boundary", CLASSICAL_DYE, "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, proves the chord-defect identity independently, and derives the single-orbit statement relative to a fixed conic from Bezout."),
                 lean("containing-quadratic rigidity implication", ["rigidity", "rigidity_spine"], axioms),
             ],
         ),
@@ -521,7 +522,7 @@ def components_by_row(
             ],
         ),
         20: (
-            "Orbit masses, concurrence counts, and chord defect certify the fifteen uncovered sizes. The absence of a nearer conic remains a trusted exhaustive execution over all 160,930 nonsingular conics; qualitative rigidity is routed separately in row 17.",
+            "Orbit masses, concurrence counts, and chord defect certify the fifteen uncovered sizes. Qualitative rigidity is routed separately in row 17, which makes the exhaustive conic-distance execution redundant; it is retained as reported computation over all 160,930 nonsingular conics rather than as a claim.",
             [
                 finite_certificate(
                     "fifteen-orbit uncovered-size ledger",
@@ -555,7 +556,7 @@ def components_by_row(
             ],
         ),
         24: (
-            "The manuscript proves the universal chord-defect identity, quadratic barrier, even-order oval obstruction, and passant window and applies the cited partial-cover theorem; Lean checks the six-arc specialization and an explicit Sylvester distance-two clique certificate.",
+            "The manuscript proves the universal chord-defect identity, the odd-order concurrence spectrum, the quadratic barrier, the even-order oval obstruction, and the passant window, and applies the cited partial-cover theorem; Lean checks the six-arc specialization and an explicit Sylvester distance-two clique certificate.",
             [
                 conceptual("universal secant moments and conic-filling window", ["Complete double count in the manuscript; the standard even-order oval nucleus is cited from Hirschfeld"] + CLASSICAL_PARTIAL_COVER, "The identity, defect bound, quadratic barrier, even-order oval obstruction, and lower field-size bound are proved for every k in the manuscript; the stronger upper bound is deduced from the cited partial-cover theorem."),
                 conceptual("Clebsch q=11 specialization", CLASSICAL_DYE, "Only the displayed Clebsch specialization uses Dye's ten Brianchon points; it is not asserted for an arbitrary six-arc."),
@@ -573,15 +574,15 @@ def components_by_row(
             ],
         ),
         26: (
-            "The all-field formula is conceptual; q=19 is checked by an independent exact specialization.",
+            "The golden normal form and the all-field formula are conceptual; q=19 is checked by an independent exact specialization.",
             [
-                conceptual("Clebsch-family chord count and associated-conic inclusion", CLASSICAL_DYE_ASSOCIATED_CONIC, "The manuscript derives the polynomial from the ten-Brianchon equality and uses Dye's edge criterion for the associated-conic inclusion."),
+                conceptual("Clebsch-family chord count and associated-conic inclusion", CLASSICAL_DYE_ASSOCIATED_CONIC, "The manuscript normalizes the equality configuration over Z[phi], derives the polynomial from the ten-Brianchon equality, and uses Dye's edge criterion for the associated-conic inclusion."),
                 lean("uncovered-locus polynomial", ["clebsch_formula"], axioms),
                 replay("q=19 specialization", ["check_q19_nonexample.py"], q19_coverage, "The replay independently constructs and checks the q=19 specialization.", direct_coordinates),
             ],
         ),
         29: (
-            "Lean proves only the small-arc moment reductions. The q=13 saturated weight-eight exclusion and the orbit-span/automorphism conclusions have human structural proofs. Weight ten, the q=11/q=13 seven-arc leaves, and the sharp q=13,17,19 maximum-six assertion retain finite certificates; the minimum-layer classification remains trusted execution.",
+            "Lean proves only the small-arc moment reductions. The named pencil-saturation lemma, the q=13 saturated weight-eight exclusion, and the orbit-span/automorphism conclusions have human structural proofs. Weight ten, the q=11/q=13 seven-arc leaves, and the sharp q=13,17,19 maximum-six assertion retain finite certificates; the minimum-layer classification remains trusted execution.",
             [
                 conceptual("small-arc reductions, k=6 dependency, and k=8 field sieve", CLASSICAL_SYLVESTER + CLASSICAL_DYE + CLASSICAL_PARTIAL_COVER, "The manuscript derives the moment equations, applies the partial-cover window, and proves the q=13 passant-saturation reduction; only the k=6 branch invokes rows 25 and 17."),
                 conceptual("q=13 tangent reduction", CLASSICAL_SEGRE_TANGENTS, "The manuscript reduces a weight-eight word to a seven-clique and displays the complete six-difference-set, five-row unique-closure certificate."),
@@ -590,10 +591,10 @@ def components_by_row(
                 finite_certificate(
                     "q=13 weight-ten profile exclusions",
                     [
-                        ["python3", "verification/c723_q13_weight10_profiles.py", "--check"],
-                        ["python3", "verification/c723_q13_weight10_independent.py"],
+                        ["python3", "verification/q13_weight10_profiles.py", "--check"],
+                        ["python3", "verification/q13_weight10_independent.py"],
                     ],
-                    ["verification/c723_q13_weight10_profiles.json"],
+                    ["verification/q13_weight10_profiles.json"],
                     "The two exhaustive pencil-profile domains contain 6,531,840 and 166,561,920 supports.",
                     "Canonical disjoint sets of partial 78-bit XOR syndromes exclude zero; a differently split full-fibre dynamic program checks the same domains.",
                     "The old meet-in-the-middle branch in check_q13_tangent_code.py remains corroboration.",
@@ -610,13 +611,13 @@ def components_by_row(
                 finite_certificate(
                     "q=13,17,19 maximum passant-arc size six",
                     [
-                        ["python3", "verification/c725_terminal_orbit_dag.py"],
-                        ["python3", "verification/c725_terminal_orbit_dag.py", "--check"],
-                        ["python3", "verification/c725_terminal_orbit_dag_replay.py", "--check"],
+                        ["python3", "verification/terminal_orbit_dag.py"],
+                        ["python3", "verification/terminal_orbit_dag.py", "--check"],
+                        ["python3", "verification/terminal_orbit_dag_replay.py", "--check"],
                     ],
                     [
-                        "verification/c725_terminal_orbit_dag.json.gz",
-                        "verification/c725_terminal_orbit_dag_replay.json",
+                        "verification/terminal_orbit_dag.json.gz",
+                        "verification/terminal_orbit_dag_replay.json",
                     ],
                     "The complete 604, 4,442, and 11,260-node root-edge orbit DAGs over q=13,17,19, including every transition and terminal blocker assignment.",
                     "Rooted transition masses and the global edge-coverage identity inductively cover every labelled arc; explicit six-point witnesses prove sharpness.",
@@ -756,27 +757,27 @@ def checks() -> list[dict[str, object]]:
         ),
         (
             "q13-weight-ten-certificate",
-            ["python3", "verification/c723_q13_weight10_profiles.py", "--check"],
+            ["python3", "verification/q13_weight10_profiles.py", "--check"],
             900,
         ),
         (
             "q13-weight-ten-independent",
-            ["python3", "verification/c723_q13_weight10_independent.py"],
+            ["python3", "verification/q13_weight10_independent.py"],
             900,
         ),
         (
             "terminal-orbit-dag-direct",
-            ["python3", "verification/c725_terminal_orbit_dag.py"],
+            ["python3", "verification/terminal_orbit_dag.py"],
             180,
         ),
         (
             "terminal-orbit-dag-regeneration",
-            ["python3", "verification/c725_terminal_orbit_dag.py", "--check"],
+            ["python3", "verification/terminal_orbit_dag.py", "--check"],
             900,
         ),
         (
             "terminal-orbit-dag-independent",
-            ["python3", "verification/c725_terminal_orbit_dag_replay.py", "--check"],
+            ["python3", "verification/terminal_orbit_dag_replay.py", "--check"],
             900,
         ),
     ):
@@ -845,7 +846,7 @@ def build_manifest() -> dict[str, object]:
                 "paper", "verification/computational_companion_trust.json"
             ),
             "finite_boundary_manifest": file_evidence(
-                "paper", "verification/c725_finite_boundary_manifest.json"
+                "paper", "verification/finite_boundary_manifest.json"
             ),
             "evidence": [
                 file_evidence("paper", f"verification/{name}")
@@ -853,14 +854,14 @@ def build_manifest() -> dict[str, object]:
                     "build_finite_census_certificates.py",
                     "finite_census_certificates.json",
                     "finite_census_certificates.sha256",
-                    "c723_q13_weight10_profiles.py",
-                    "c723_q13_weight10_profiles.json",
-                    "c723_q13_weight10_independent.py",
-                    "c725_terminal_orbit_dag.py",
-                    "c725_terminal_orbit_dag.json.gz",
-                    "c725_terminal_orbit_dag_replay.py",
-                    "c725_terminal_orbit_dag_replay.json",
-                    "c725_terminal_orbit_dag.sha256",
+                    "q13_weight10_profiles.py",
+                    "q13_weight10_profiles.json",
+                    "q13_weight10_independent.py",
+                    "terminal_orbit_dag.py",
+                    "terminal_orbit_dag.json.gz",
+                    "terminal_orbit_dag_replay.py",
+                    "terminal_orbit_dag_replay.json",
+                    "terminal_orbit_dag.sha256",
                 )
             ],
         },
