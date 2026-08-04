@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "69a14194861f656c66021f015ee564c87adcaaab06fe4b5faf42d3f7f2760087",
+      "sha256": "012136e07579df68b662590c032581e037900df0315bb9ad1285d3a0264afed5",
       "source_blob": null
     },
     {
@@ -165,13 +165,13 @@
       "source_blob": "e6ae20cd4ba49c40470f443b73d3756a35c870be"
     },
     {
-      "bytes": 206747,
+      "bytes": 206758,
       "mode": "100644",
       "path": "clebsch_rigidity.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "d98ecd6b07992041ae3ae2da42e4b62fe02cba5662eff5e7e5bfd9cf0f15ba94",
-      "source_blob": "52bd566cc1d60aecbc327f28a37372ac36065302"
+      "sha256": "6f2a8d6b6f3cc142e24702becabee8f1f7661688a318f59d9fa515b758cca917",
+      "source_blob": "8d2e664db5078596aee49d63b70b5af66f2f2d91"
     },
     {
       "bytes": 95007,
@@ -188,8 +188,8 @@
       "path": "clebsch_rigidity_computational_companion.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "b70a126b4b85264a5c39bd45ae22759e6096fd51d24d18f8ebfc4edf58802534",
-      "source_blob": "facf79f1e33b96cdad481acacfbae7c5207ec8f9"
+      "sha256": "26509dc32dddad52a9da7678244d29eefb57d64ca2c7ede58eb40e8e2a75986b",
+      "source_blob": "f568b5aca3538abf3f077f4d9280116744fd504d"
     },
     {
       "bytes": 44513,
@@ -219,13 +219,13 @@
       "source_blob": "3109b1e653dded8eb31254cd98a9eae4a24ec3ea"
     },
     {
-      "bytes": 5398,
+      "bytes": 6401,
       "mode": "100644",
       "path": "verification/README.md",
       "rewrites": [],
       "role": "verification",
-      "sha256": "4e3e8f687d50b60b01356b30580ebed1493f67965af822c59c1e51f4b22d9211",
-      "source_blob": "9c5c60066a270790f2beab67d9a12ae66a14b645"
+      "sha256": "12cd91ca80cfc717b77e6b8befb74f71ecde267f3c1c49097d883a0428b2fda0",
+      "source_blob": "5ecc2ca4925b0a104f2103eee0c90afc38abbd3a"
     },
     {
       "bytes": 21221,
@@ -255,13 +255,13 @@
       "source_blob": "8f8d34c9f18e1a1e2b9a086826aad87599bbab26"
     },
     {
-      "bytes": 2885,
+      "bytes": 5588,
       "mode": "100644",
       "path": "verification/check_manuscript_build.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "f6cd748e00ba43472bc7987eeaf39ee9143b551a23d5663270c32cdf676b4a4e",
-      "source_blob": "aaf794985c6be668a3fe5e938a7d8b64886b8a78"
+      "sha256": "851a718237e9d05cc02a2a4f02cc14d47bd491e2cb106a97bf3bf6e51ed8847b",
+      "source_blob": "df5c34ad4822dc331e4bac53f62b70ba164823ca"
     },
     {
       "bytes": 3362,
@@ -480,13 +480,13 @@
       "source_blob": "fc950cc98ede95426b81fcde1e93e24b7a6810dd"
     },
     {
-      "bytes": 6670,
+      "bytes": 8443,
       "mode": "100644",
       "path": "verification/test_verification_tools.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "0de259a17abc4f144f7773fe46dabeba352b61da85d23013ab3809547f051bae",
-      "source_blob": "8ea389f16664cc5ff4120b689eea254e820a3a13"
+      "sha256": "1b6a9bc5b79f56c52721a4a7e66fd709c0c09edd907e74455572417a5aabb497",
+      "source_blob": "9b33750ef7faa51df78d8344930ea4c339a5c82e"
     },
     {
       "bytes": 103634,
@@ -494,8 +494,8 @@
       "path": "verification/trust_manifest.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "3b5fb034ad80caff0c4d2af7c09a6a685eb8d43193b089683b7797f14edcf0e2",
-      "source_blob": "c2307a62222d916bcaa1cf3acf7dd701db2a2458"
+      "sha256": "099c72fd2f78791e9d847600a2c0e8af74fe7f36d46c938f2229232b49980193",
+      "source_blob": "a8821ac7656f79d7c608dec868c3837b6f24a522"
     },
     {
       "bytes": 2997,
@@ -503,8 +503,8 @@
       "path": "verification/verify-release-output.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "acae75cc4e9f39b95c8917b3489dcfb4c8d882b3b4e9161533f756c404561e2c",
-      "source_blob": "00a2e7862987b4c08f612fa0f4665d7080b94740"
+      "sha256": "e8e11b8bae63567a5cc51824460c62767924d50f146ef414c94d2756e3f4ff13",
+      "source_blob": "3200d1b4b883ff4926bb63cd530d45ab50289967"
     },
     {
       "bytes": 9018,
@@ -549,5 +549,5 @@
   "repository": "clebsch-rigidity",
   "repository_map_sha256": "328166a2903fce18485507b2120f3a3938f9001925e80beda7b333260398202f",
   "schema_version": 1,
-  "source_commit": "a41ca87bc8741a8b3945f9f2e228edfe664fe90c"
+  "source_commit": "4a9e16e7d54396c834ab1e097783e2d7cf6528b1"
 }
