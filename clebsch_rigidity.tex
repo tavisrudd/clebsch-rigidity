@@ -38,8 +38,7 @@ from its deep-hole syndrome locus}
 \begingroup
 \makeatletter
 \let\clebschmaintitle\@title
-\def\@title{\large\textsc{The Clebsch cubic}\\[0.15em]
-  \normalsize\textsc{Recovering, orienting, and realizing --- }\textbf{I}\\[0.7em]
+\def\@title{\large\textsc{The Clebsch cubic --- }\textbf{I}\\[0.7em]
   \LARGE\clebschmaintitle}
 \makeatother
 \maketitle
@@ -47,8 +46,9 @@ from its deep-hole syndrome locus}
 
 \begin{center}
 \small\itshape
-From deep holes, the cubic \textbf{takes shape}, finds its bearings, and stands
-fixed while its shadows move.
+From deep holes, the cubic \textbf{takes shape}, finds its bearings,\\
+stands fixed while its shadows move, rebuilds the plane that cast it,\\
+and gathers its shadows home.
 \end{center}
 
 \begin{abstract}
@@ -1320,8 +1320,11 @@ The support bipartition and the twelve deep-hole directions carry two
 apparently different orientation choices.  We now show that they are the
 same datum.  This comparison uses only the reconstructed $A_5$-sets in this
 paper.  We use the standard correspondence between two-graphs, switching
-classes, and Seidel matrices; see
-\cite[\S2]{DuncanHoffmanSolazzo2011}.
+classes, and Seidel matrices.  Two-graphs are due to Higman, with Taylor the
+standard reference and Seidel's switching the graph-side description; see
+Brouwer and Van Maldeghem \cite[\S1.1.12]{BrouwerVanMaldeghem} for the
+correspondence with attributions, and \cite[\S2]{DuncanHoffmanSolazzo2011}
+for the presentation used here.
 
 The cubic threefold that appears below agrees with a known six-nodal model.
 Cheltsov, Tschinkel, and Zhang classify cubics already assumed to have six
@@ -1828,7 +1831,7 @@ Its pinned artifacts are
 \begin{center}
 \small
 certificate-package commit:
-\path{9c5d474f502a5ae8e189bc9fdf0fffa7ab96e0c5}\\
+\path{c36699656de88f6a2fc1a5e53cf9a6153705aa7f}\\
 base-library commit:
 \path{85dfde9e13e6c3d004e0e659fb83c1a4761902d0}\\
 aggregate gate:
@@ -1843,7 +1846,7 @@ The SHA-256 digest of \path{verification/checker_outputs.json} is
 The SHA-256 digest of
 \path{RelativeConicArcs/Gates/ClebschRigidityTrust.lean} is
 \begin{center}
-\small\path{4bc2adb5f64df0a0f3490a948020fbe200d9169d6c08d232a0ed2879e7ab6319}.
+\small\path{0936dd75942cd1fd65608484f2fc7685c88aa703d1d32ccd25442d68e2cd06dc}.
 \end{center}
 This formalization is an
 independent cross-check, not a proof dependency of the manuscript.  Its
@@ -2076,6 +2079,12 @@ Y.~Zhang, D.~Wan, and K.~Kaipa,
 \newblock \emph{IEEE Transactions on Information Theory} \textbf{66}(4)
 (2020), 2392--2401.
 \newblock arXiv:1901.05445.
+
+\bibitem{BrouwerVanMaldeghem}
+A.~E. Brouwer and H.~Van Maldeghem,
+\emph{Strongly Regular Graphs},
+Cambridge University Press (2022),
+\href{https://doi.org/10.1017/9781009057226}{doi:10.1017/9781009057226}.
 
 \end{thebibliography}
 
