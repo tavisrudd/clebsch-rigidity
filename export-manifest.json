@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "8204f0dd435c12ea92483ae6500a6ebeebfa17cb26cf36233c6347098b4fe4e9",
+      "sha256": "33f6e39315271fde961ad410fd9d6b2668a1ad4f75c93a1dcab1ea194eab6a24",
       "source_blob": null
     },
     {
@@ -567,5 +567,5 @@
   "repository": "clebsch-rigidity",
   "repository_map_sha256": "59230e8d90cbd3a647c7577061816d50d5f3d2fa9ffa1a21e9d6da3c5251fba9",
   "schema_version": 1,
-  "source_commit": "96746f704348442e800307ed0ff23b448d169ad4"
+  "source_commit": "ea0fc6b39dbcdd18143ecc5a906eb9afc7ac42dd"
 }
