@@ -21,12 +21,13 @@ IDENTITY_PATH = PAPER_ROOT / "verification" / "statement_identity.json"
 OUTPUT_PATH = PAPER_ROOT / "verification" / "trust_manifest.json"
 GATE_PATH = "RelativeConicArcs/Gates/ClebschRigidityWithOrderElevenCertificates.lean"
 AUDIT_PATH = "verification/clebsch_rigidity_trust/axiom-audit.txt"
-PINNED_PACKAGE_COMMIT = "a80e7de66a65c1b9cc5367dabbfdb7b8576ba671"
-PINNED_FINITEGEOM_COMMIT = "575cf3e991168fb96eb24c318263c5d0552aa531"
+PINNED_PACKAGE_COMMIT = "930675c6b8bf44e06847d15bd6e63560caa6977f"
+PINNED_FINITEGEOM_COMMIT = "187bed8895fc62784caf2022d717b4daa37871ad"
 
 
 TERMINALS = {
     "orbits": [
+        "RelativeConicArcs.Examples.Q11A5PointOrbits.twoGenerator_pointOrbit_partition",
         "RelativeConicArcs.Examples.Q11A5PointOrbits.point_orbit_partition",
         "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_six_orbit",
         "RelativeConicArcs.Examples.Q11A5PointOrbits.unique_twelve_orbit",
@@ -46,6 +47,11 @@ TERMINALS = {
         "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts",
         "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree",
         "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports",
+        "RelativeConicArcs.Examples.Q11Coding.brianchon_decoder_matching_dictionary",
+    ],
+    "support_chirality": [
+        "RelativeConicArcs.Examples.Q11Coding.distanceThree_leaderSupports_eq_chiralitySheets",
+        "RelativeConicArcs.Examples.Q11Coding.supportChirality_generatorOrbits_and_exchange",
     ],
     "rigidity": [
         "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
@@ -110,26 +116,22 @@ TERMINALS = {
     ],
 }
 
-CLASSICAL_ODD_A5_SPLITTING = (
-    "The proposition-valued interface "
-    "RelativeConicArcs.SupportOrientationCommutant."
-    "ClassicalOddA5ThreePlusThreeSplitting supplies the classical conjugate "
-    "3+3' decomposition, Schur-lemma upper containment, and Galois descent."
-)
-
 CLASSICAL_DYE = [
     "Dye 1991, Section 2.2 and Theorem 1(ii), page 275, and "
-    "Theorem 3, page 278",
+    "Theorem 3, page 278, including its characteristic-five S5 exception",
 ]
 CLASSICAL_DYE_RIGIDITY = [
     "Dye 1991, Section 2.2, page 275, for the ten-point bound, "
     "Theorem 1(ii), page 275, for equality classification, "
-    "and Theorem 3, page 278, for the stabilizer",
+    "and Theorem 3, page 278, for the A5 stabilizer and its "
+    "characteristic-five enlargement to S5",
     "Dye 1991, Theorem 2, pages 276--278, for the unique associated polarity",
 ]
 CLASSICAL_DYE_ASSOCIATED_CONIC = [
     "Dye 1991, Theorem 1, pages 275--276, and the edge criterion in the "
     "discussion preceding Theorem 6, pages 281--282",
+    "Dye 1991, Theorem 3, page 278, for the A5 stabilizer away from "
+    "characteristic five and the S5 stabilizer in characteristic five",
 ]
 CLASSICAL_EDGE_DYE = [
     "Edge 1956, Sections 29--32",
@@ -340,8 +342,6 @@ def lean(
             },
         },
     }
-    if "orientation_spine" in groups:
-        lean_evidence["conditional_interfaces"] = [CLASSICAL_ODD_A5_SPLITTING]
     return {
         "route": "kernel-checked-lean",
         "subclaim": subclaim,
@@ -394,7 +394,9 @@ def components_by_row(
     automorphism_coverage = (
         "Over F_11, the checker tests all 6! coordinate permutations and "
         "constructs the complete projective and monomial automorphism actions "
-        "of the displayed six-column code."
+        "of the displayed six-column code; from the two displayed generators "
+        "and seven seeds it also reconstructs all 133 projective points and "
+        "the complete seven-orbit breadth-first partition."
     )
     decoder_coverage = (
         "Over F_11, the three checkers enumerate every projective syndrome "
@@ -448,7 +450,7 @@ def components_by_row(
     )
     return {
         2: (
-            "Lean proves the conic-containment implication through the explicit Dye axiom seam; the associated polarity and stabilizer identification remain cited classical consequences.",
+            "Lean proves the conic-containment implication from definitions with only foundational logical axioms; the associated polarity and stabilizer identification remain cited classical consequences.",
             [
                 conceptual("classical equality, polarity, and stabilizer identification", CLASSICAL_DYE_RIGIDITY, "The line bound and chord-defect deduction are proved in the manuscript."),
                 lean("symmetry-free rigidity implication", ["rigidity", "rigidity_spine"], axioms),
@@ -456,10 +458,11 @@ def components_by_row(
             ],
         ),
         11: (
-            "The gate checks the explicit order-sixty action and its point-orbit partition; its identification with the classical A5 action uses Dye.",
+            "The gate and an independent paper-owned replay check the two-generator word certificate for the explicit order-sixty action and prove that its seven reachability classes are exactly the displayed point blocks; identifying the geometric blocks with the classical A5 configuration uses Dye.",
             [
-                conceptual("classical group identification", CLASSICAL_DYE, "The displayed matrices and their finite action are checked exactly."),
-                lean("explicit finite point orbits", ["orbits"], axioms),
+                conceptual("classical group and geometric-block identification", CLASSICAL_DYE, "The two displayed generators, their finite action, and both breadth-first word ledgers are checked exactly."),
+                lean("two-generator finite point orbits", ["orbits"], axioms),
+                replay("independent two-generator point-orbit partition", ["check_code_automorphisms.py"], automorphism_coverage, "The replay reconstructs every normalized projective point, both displayed generator actions, all seven seeded orbits, and both maximum word depths.", direct_coordinates),
             ],
         ),
         12: (
@@ -497,7 +500,7 @@ def components_by_row(
             ],
         ),
         17: (
-            "The manuscript handles degenerate conics by the proved line bound; Lean checks the nonsingular-conic implication relative to Dye's two declared consequences.",
+            "The manuscript handles degenerate conics by the proved line bound; Lean checks the nonsingular-conic implication from definitions with no declared Dye or other project axiom.",
             [
                 conceptual("degenerate-conic reduction and Dye equality boundary", CLASSICAL_DYE, "The manuscript proves the line bound, reduces a degenerate containing conic to the same cardinality equality, proves the chord-defect identity independently, and derives the single-orbit statement relative to a fixed conic from Bezout."),
                 lean("containing-quadratic rigidity implication", ["rigidity", "rigidity_spine"], axioms),
@@ -550,12 +553,12 @@ def components_by_row(
             ],
         ),
         23: (
-            "The support bipartition and intrinsic orientation theorem have complete human proofs. The exact replay checks every finite identity independently. Lean kernel-checks the eight-step orientation spine; the two commutant equalities use the explicitly recorded classical 3+3' splitting interface.",
+            "The support bipartition and intrinsic orientation theorem have complete human proofs. The exact replay checks every finite identity independently. Lean kernel-checks the eight-step orientation spine, including the unconditional rational and integral commutant equalities from the explicit two-generator system.",
             [
                 conceptual("intrinsic support bipartition", CLASSICAL_EDGE_DYE, "The manuscript proves invariance without choosing an orientation."),
                 replay("support and automorphism replay", ["check_chirality.py", "check_code_automorphisms.py"], support_coverage, "The scripts exhaust the ambiguity supports and displayed code automorphisms.", direct_coordinates),
                 replay("support cubic, continuation operator, and diagonal determinant pencil", ["check_orientation_two_graph.py"], orientation_coverage, "The manuscript proves the switching invariance, inverse gauge construction, association-algebra identity, and Jacobi complementary-minor deduction.", direct_coordinates),
-                lean("antipodal cover through rational and integral commutants", ["orientation_symmetry", "orientation_spine"], axioms),
+                lean("intrinsic support sheets through rational and integral commutants", ["support_chirality", "orientation_symmetry", "orientation_spine"], axioms),
             ],
         ),
         24: (
@@ -569,7 +572,7 @@ def components_by_row(
             ],
         ),
         25: (
-            "Lean checks the chord formulas and an explicit Sylvester-graph clique certificate; the q=11 classification inherits Dye's rigidity boundary.",
+            "Lean checks the chord formulas, an explicit Sylvester-graph clique certificate, and the proved order-eleven rigidity spine; the cited inputs identify the classical surrounding geometry.",
             [
                 conceptual("Sylvester graph interpretation and q=11 rigidity dependency", CLASSICAL_SYLVESTER + CLASSICAL_DYE, "The chord arithmetic and explicit finite graph certificate are kernel checked; the manuscript invokes row 17 only for the final q=11 orbit classification."),
                 lean("field-order boundary", ["field_order"], axioms),
@@ -579,7 +582,7 @@ def components_by_row(
         26: (
             "The golden normal form and the all-field formula are conceptual; q=19 is checked by an independent exact specialization.",
             [
-                conceptual("Clebsch-family chord count and associated-conic inclusion", CLASSICAL_DYE_ASSOCIATED_CONIC, "The manuscript normalizes the equality configuration over Z[phi], derives the polynomial from the ten-Brianchon equality, and uses Dye's edge criterion for the associated-conic inclusion."),
+                conceptual("Clebsch-family chord count, associated-conic inclusion, and stabilizer exception", CLASSICAL_DYE_ASSOCIATED_CONIC, "The manuscript normalizes the equality configuration over Z[phi], derives the polynomial from the ten-Brianchon equality, records the characteristic-five stabilizer enlargement, and uses Dye's edge criterion for the associated-conic inclusion."),
                 lean("uncovered-locus polynomial", ["clebsch_formula"], axioms),
                 replay("q=19 specialization", ["check_q19_nonexample.py"], q19_coverage, "The replay independently constructs and checks the q=19 specialization.", direct_coordinates),
             ],
@@ -901,7 +904,8 @@ def build_manifest() -> dict[str, object]:
             "command": (
                 "nix develop --command python3 "
                 "verification/verify_release.py "
-                "--lean-root /absolute/path/to/finitegeom"
+                "--lean-root /absolute/path/to/finitegeom-clebsch-q11-certificates "
+                "--finitegeom-root /absolute/path/to/finitegeom"
             ),
             "entry_point": file_evidence(
                 "paper", "verification/verify_release.py"

@@ -1,14 +1,14 @@
 {
   "artifacts": [
     {
-      "commit": "575cf3e991168fb96eb24c318263c5d0552aa531",
+      "commit": "187bed8895fc62784caf2022d717b4daa37871ad",
       "gate": "RelativeConicArcs.Gates.ClebschRigidityTrust",
       "manifest": "trust/manifests/clebsch_rigidity.json",
       "repository": "https://github.com/tavisrudd/finitegeom",
       "role": "shared-library"
     },
     {
-      "commit": "a80e7de66a65c1b9cc5367dabbfdb7b8576ba671",
+      "commit": "930675c6b8bf44e06847d15bd6e63560caa6977f",
       "depends_on": "shared-library",
       "gate": "RelativeConicArcs.Gates.ClebschRigidityWithOrderElevenCertificates",
       "manifest": "MANIFEST.json",
@@ -17,6 +17,6 @@
     }
   ],
   "concept_doi": "10.5281/zenodo.21650878",
-  "relationship": "optional formal companion; no manuscript claim depends on Lean",
+  "relationship": "formal certificate for the finite two-generator orbit census; independent cross-check for the remaining manuscript claims",
   "schema": "formal-companion-v2"
 }

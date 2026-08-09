@@ -37,18 +37,6 @@ FORBIDDEN_SCOPE = {
     "reflection",
     "torsor",
 }
-ODD_A5_COMMUTANT_TERMINALS = {
-    "RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator",
-    "RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive",
-}
-CLASSICAL_ODD_A5_SPLITTING = (
-    "The proposition-valued interface "
-    "RelativeConicArcs.SupportOrientationCommutant."
-    "ClassicalOddA5ThreePlusThreeSplitting supplies the classical conjugate "
-    "3+3' decomposition, Schur-lemma upper containment, and Galois descent."
-)
-
-
 def fail(message: str) -> NoReturn:
     raise ValueError(message)
 
@@ -139,6 +127,58 @@ def parse_audit(path: Path) -> dict[str, list[str]]:
     return result
 
 
+def parse_gate_terminals(path: Path) -> set[str]:
+    """Return the exact declarations audited by the aggregate gate."""
+    terminals = re.findall(
+        r"^\s*#print\s+axioms\s+(\S+)\s*$",
+        path.read_text(encoding="utf-8"),
+        re.MULTILINE,
+    )
+    if not terminals:
+        fail("aggregate gate contains no #print axioms terminals")
+    if len(terminals) != len(set(terminals)):
+        fail("aggregate gate repeats a #print axioms terminal")
+    return set(terminals)
+
+
+def claim_lean_components(claim: dict[str, object]) -> list[dict[str, object]]:
+    """Collect every Lean evidence component attached to one claim row."""
+    result: list[dict[str, object]] = []
+    lean = claim.get("lean")
+    if isinstance(lean, dict):
+        result.append(lean)
+    components = claim.get("components")
+    if isinstance(components, list):
+        for component in components:
+            if isinstance(component, dict):
+                lean = component.get("lean")
+                if isinstance(lean, dict):
+                    result.append(lean)
+    return result
+
+
+def require_exact_terminal_coverage(
+    manifest_terminals: set[str],
+    gate_terminals: set[str],
+    audit_terminals: set[str],
+) -> None:
+    """Reject any omission or addition across manifest, gate, and audit."""
+    if manifest_terminals != gate_terminals:
+        missing = sorted(gate_terminals - manifest_terminals)
+        extra = sorted(manifest_terminals - gate_terminals)
+        fail(
+            "manifest Lean terminals do not equal aggregate-gate terminals: "
+            f"missing={missing}, extra={extra}"
+        )
+    if audit_terminals != gate_terminals:
+        missing = sorted(gate_terminals - audit_terminals)
+        extra = sorted(audit_terminals - gate_terminals)
+        fail(
+            "axiom-audit terminals do not equal aggregate-gate terminals: "
+            f"missing={missing}, extra={extra}"
+        )
+
+
 def validate_lean(
     value: object,
     repositories: dict[str, Path],
@@ -174,11 +214,8 @@ def validate_lean(
         for item in conditional_interfaces
     ):
         fail(f"{where}.conditional_interfaces must be a list of nonempty strings")
-    if ODD_A5_COMMUTANT_TERMINALS & set(terminals):
-        if conditional_interfaces != [CLASSICAL_ODD_A5_SPLITTING]:
-            fail(f"{where} must disclose the classical odd-A5 splitting interface")
-    elif conditional_interfaces:
-        fail(f"{where} declares a conditional interface for unrelated terminals")
+    if conditional_interfaces:
+        fail(f"{where} declares a conditional interface")
     validation = value.get("validation")
     if not isinstance(validation, dict):
         fail(f"{where}.validation must be an object")
@@ -516,6 +553,37 @@ def main() -> int:
         for fragment in REQUIRED_CITATION_FRAGMENTS.get(row, ()):
             if fragment not in claim_text:
                 fail(f"manifest claim row {row} omits required cited input: {fragment}")
+    lean_components = [
+        lean
+        for claim in claims
+        for lean in claim_lean_components(claim)
+    ]
+    if not lean_components:
+        fail("manifest contains no Lean evidence components")
+    gate_paths = {
+        repositories[require_string(lean["gate"].get("repository"), "lean.gate.repository")]
+        / require_string(lean["gate"].get("path"), "lean.gate.path")
+        for lean in lean_components
+    }
+    audit_paths = {
+        repositories[require_string(lean["audit"].get("repository"), "lean.audit.repository")]
+        / require_string(lean["audit"].get("path"), "lean.audit.path")
+        for lean in lean_components
+    }
+    if len(gate_paths) != 1 or len(audit_paths) != 1:
+        fail("all Paper I Lean components must use one aggregate gate and one audit")
+    manifest_terminals = {
+        terminal
+        for lean in lean_components
+        for terminal in lean["terminals"]
+    }
+    gate_terminals = parse_gate_terminals(next(iter(gate_paths)))
+    audit_terminals = set(parse_audit(next(iter(audit_paths))))
+    require_exact_terminal_coverage(
+        manifest_terminals,
+        gate_terminals,
+        audit_terminals,
+    )
     environment = manifest.get("reproducibility_environment")
     if not isinstance(environment, dict):
         fail("manifest.reproducibility_environment must be an object")

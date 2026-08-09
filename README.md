@@ -43,14 +43,17 @@ successful output. The twenty selected exact checker invocations and pinned
 Nix environment are release-local; the aggregate formal gate is
 `RelativeConicArcs/Gates/ClebschRigidityWithOrderElevenCertificates.lean` in the
 certificate package.  It imports the causal rigidity spine and all eight
-orientation packets.  The commutant terminals are conditional only on the
-explicit classical conjugate `3+3'` Schur--Galois interface recorded in the
-trust manifest; golden equivariance and integral descent are kernel checked.
+orientation packets.  The commutant terminals are unconditional: the pinned
+library proves the reverse containment from explicit five-cycle and
+three-cycle commutation equations, while golden equivariance and integral
+descent are kernel checked.
 
-The main paper's q11 orbit decomposition and decoding oracle are structural
-proofs from eigenspaces, stabilizers, orbit--stabilizer, and chord-incidence
-identities. Generated q11 tables are retained only as an independent formal
-cross-check and as evidence for the companion's sharper finite census claims.
+The main paper's q11 orbit decomposition has an explicit two-generator finite
+certificate, independently checked by the formal gate and the paper-owned
+automorphism replay. Its decoding oracle is a structural proof from
+chord-incidence identities. Generated q11 tables are retained only as a
+redundant formal cross-check and as evidence for the companion's sharper
+finite census claims.
 
 The reusable formal source is distributed in
 `https://github.com/tavisrudd/finitegeom`; the aggregate q11 gate is in
@@ -58,11 +61,27 @@ The reusable formal source is distributed in
 revisions are recorded in the manuscript.  The version-independent archival
 locator of `finitegeom` is the Zenodo concept DOI
 [`10.5281/zenodo.21650878`](https://doi.org/10.5281/zenodo.21650878).
-From this directory, supply a checkout of the q11 certificate package
-as `--lean-root`:
+From this directory, supply the pinned q11 certificate package as `--lean-root`
+and the pinned shared library as `--finitegeom-root`.  A passing release checks
+the exact transitive project-owned closure across both repositories:
 
 ```text
 nix develop --command \
   python3 verification/verify_release.py \
+  --lean-root /absolute/path/to/finitegeom-clebsch-q11-certificates \
+  --finitegeom-root /absolute/path/to/finitegeom
+```
+
+Workspace maintainers must build the aggregate through the guarded queue first
+and pass its successful run directory back to the release verifier:
+
+```text
+../../lean/scripts/lean-build-queue.py build \
+  RelativeConicArcs.Gates.ClebschRigidityWithOrderElevenCertificates \
   --lean-root /absolute/path/to/finitegeom-clebsch-q11-certificates
+nix develop --command \
+  python3 verification/verify_release.py \
+  --lean-root /absolute/path/to/finitegeom-clebsch-q11-certificates \
+  --finitegeom-root /absolute/path/to/finitegeom \
+  --guarded-lean-run /run/directory/printed/by/the/guard
 ```
