@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "9be5375216c5c0bcabeb26adcae1e5f6891c98ce0c42e32f75eb4bd22d1c875f",
+      "sha256": "f686da1dbb0fd8aa7ebbb49a437bf42dc93d0525649fe808f5892f2f8371324b",
       "source_blob": null
     },
     {
@@ -165,13 +165,13 @@
       "source_blob": "e6ae20cd4ba49c40470f443b73d3756a35c870be"
     },
     {
-      "bytes": 220034,
+      "bytes": 220031,
       "mode": "100644",
       "path": "clebsch_rigidity.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "bc7d5c8f8ba7ca32991a7fb75de8ece6c9a87bde4ab2ed0ff2b1ceaeb6a8dc6f",
-      "source_blob": "b41ddc657b8f538ace26119fbacad0729e8a0568"
+      "sha256": "310207bf77ec0e882df4c3a4f0d91c487436a01fcb0dadb6dd787f1c18b7a6f7",
+      "source_blob": "81c95739dfcb2854020af2012f28e64cfe4d8634"
     },
     {
       "bytes": 103014,
@@ -567,5 +567,5 @@
   "repository": "clebsch-rigidity",
   "repository_map_sha256": "3837472b201ebe328ee04be49f3a87f4e080d1ca771a5d95081a287017af611c",
   "schema_version": 1,
-  "source_commit": "681e47b26bc86e84ea69c78d16bd168ceda598cc"
+  "source_commit": "f486c502906d73718de187145ea11789a8ce39e5"
 }
