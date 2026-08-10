@@ -27,8 +27,8 @@
       "path": "FORMAL_COMPANION.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "6be14c211fe5dbe52fd0b260c5ce156319aef5176b1875e5cc724982a2e767c6",
-      "source_blob": "1cf2c819673150f29ad150804f413520ed99bc05"
+      "sha256": "654edc1f5dc192aae51a425bd862c44f1aa4838d796378b059faf71844b2d82e",
+      "source_blob": "20c0e349751f29968a9926d81f536e890668248f"
     },
     {
       "bytes": 470,
@@ -44,17 +44,17 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "43544adff3cc86ed0dcc61f69b110da1c87a428fcadf7626a7387c75e42ec2da",
+      "sha256": "4756511bee8b672b7221a7c17daea2d66aa26501244f3791946bfdfa21b94401",
       "source_blob": null
     },
     {
-      "bytes": 4615,
+      "bytes": 4100,
       "mode": "100644",
       "path": "README.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "8b7c126b2d57de1465ef9f7c720251b44951ca51295021f15f747fcd42276fad",
-      "source_blob": "5cca54d7ba1a143f341a01c7ed5ad207547cacaf"
+      "sha256": "e5eeab946af7f985ebd7abd31c7daf4183c05a9096ec40be39efadca47f57119",
+      "source_blob": "6d66e171dd721f5676fbb949289d12b4c18bc33e"
     },
     {
       "bytes": 34616,
@@ -165,22 +165,22 @@
       "source_blob": "e6ae20cd4ba49c40470f443b73d3756a35c870be"
     },
     {
-      "bytes": 220018,
+      "bytes": 220549,
       "mode": "100644",
       "path": "clebsch_rigidity.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "f726414084a295dbf67269af4011d7750533c763242b05c15b9dcd0a5a061030",
-      "source_blob": "bac51994e58168ef40dce53f9bca9e0e518011b5"
+      "sha256": "85d6fa17475a6771027904c329bd5c10f04e5ed19553c7931d25810d27772a4f",
+      "source_blob": "0c8fee6bb286bd238ba4d236e9126773b4cedee7"
     },
     {
-      "bytes": 102995,
+      "bytes": 103428,
       "mode": "100644",
       "path": "clebsch_rigidity.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "f7523682897d8d88dc493086bbaf1c05285b7753da24ad070cfb5b0537b87b25",
-      "source_blob": "43d4b249c21aaf893db16efa8d35eb3a6bcea7e0"
+      "sha256": "286c5ab2c9699092bc8359261c5db6966b05cdb5c16b34ac7f2f6bf4845c65dd",
+      "source_blob": "c760cf9d63b372aadd9d27bbb4a691404282738d"
     },
     {
       "bytes": 137133,
@@ -210,22 +210,22 @@
       "source_blob": "c06115a1e8e270fb2772ce0ef216d75ab95e492f"
     },
     {
-      "bytes": 2629,
+      "bytes": 3867,
       "mode": "100644",
       "path": "flake.nix",
       "rewrites": [],
       "role": "support",
-      "sha256": "9717287b35144a3e671f9b380b6bbaf4c8ec8da9561f5b2cc41fb2d51948c858",
-      "source_blob": "9d2f79dc11c9c405ea4f25266f03dbeede09245d"
+      "sha256": "d5ea85fa290d81cca73f66e37f706127afcc217c34f0cf1f08407ef2d5ab77e5",
+      "source_blob": "6a81bc49358afbe664f1c28a2c6ec799ce4623c2"
     },
     {
-      "bytes": 7396,
+      "bytes": 6805,
       "mode": "100644",
       "path": "verification/README.md",
       "rewrites": [],
       "role": "verification",
-      "sha256": "022b3f230d7edffbe095f4e92e5273927683e975547edb23264994ebc04732a9",
-      "source_blob": "fa2fc058bc7635e592e5180bc838d4f453634dc7"
+      "sha256": "07bb0c20d2056d3eeae294b1ff798f39b0b9e576af72cd520bec5be2ebb873be",
+      "source_blob": "47c6a7293889f3a11ce7fd11cf03d5ce739b0c46"
     },
     {
       "bytes": 21221,
@@ -237,13 +237,13 @@
       "source_blob": "59622356ce30a0205c0d934a41668441aa808b83"
     },
     {
-      "bytes": 49497,
+      "bytes": 53615,
       "mode": "100644",
       "path": "verification/build_trust_manifest.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e773751dc45dfc76d32a17e66ee94275c6d1f315693e2dbb4dcd5a19ccd19a39",
-      "source_blob": "55c68a53c3ca6fcbb9a512f200a67f47e6766579"
+      "sha256": "37a6322446ce24afbc913eb19bcdf00fd25d7d599fca8ce78f5a7fe141405e2e",
+      "source_blob": "26cb96fafea6a269327be1c49a2b234d5b1693ba"
     },
     {
       "bytes": 4386,
@@ -399,13 +399,13 @@
       "source_blob": "96e02ac07e28e219eadfc798fb97772a96c38d79"
     },
     {
-      "bytes": 15411,
+      "bytes": 15436,
       "mode": "100644",
       "path": "verification/formal_companion.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "42d40dfe64f4e8d2d919316e5fcebb4ae2f2b8459a59121fdc113b9d70969a2a",
-      "source_blob": "679f17dfdae978a40881320b6e6ba4725e9c99f6"
+      "sha256": "440b0b1c56b90a92a252a4f0447e8de618aad8ab61523cb1de2b0f77e5e1b883",
+      "source_blob": "f3dc00066e6bc7575dee0c7f2214f6ee8a2cbf58"
     },
     {
       "bytes": 3358,
@@ -435,13 +435,13 @@
       "source_blob": "ac644989659ff4d8198cf39990ac65603bcc1b5f"
     },
     {
-      "bytes": 25263,
+      "bytes": 25264,
       "mode": "100644",
       "path": "verification/statement_identity.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "d123bc00f321d9162daceec40106c46bc27317d76254e87da7336381e6f32bf3",
-      "source_blob": "7554ddbab24998f8ed791086135bbd4100e51b76"
+      "sha256": "fe2808d667f260e5f1222b495902e92ce2dfc69696d53ccaf411c49430c16d50",
+      "source_blob": "e15906e91ae28df909e093d5baa89364985b243b"
     },
     {
       "bytes": 1118749,
@@ -489,31 +489,31 @@
       "source_blob": "fc950cc98ede95426b81fcde1e93e24b7a6810dd"
     },
     {
-      "bytes": 15907,
+      "bytes": 24010,
       "mode": "100644",
       "path": "verification/test_verification_tools.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "e585968859982c3a5b264fff7c75ab6241d91f0e79b1c8bb1f409bcc45577e84",
-      "source_blob": "413fe14337e08ca6947c703a459abe917e3aa03b"
+      "sha256": "d0f17f9ebd2939743608820208b4ed6bb9213ff7917db5862b4cfd63d723daf8",
+      "source_blob": "dfefe4e95b1548757b0f6ece7ee0458c9a3e5682"
     },
     {
-      "bytes": 107920,
+      "bytes": 109236,
       "mode": "100644",
       "path": "verification/trust_manifest.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "38efb7e840791032862790d623bc51637881aa1198db4dd806cf3a70e2569164",
-      "source_blob": "8c0c61a15f74b2159c93d1be1c50d319a63cc3c6"
+      "sha256": "a836f1ecf3b3f70ac9034d8bce80f3b5e55236c6a9c42c3bb8b0ac7b1aeab2bd",
+      "source_blob": "9c821e05ad944654094d9275625f24ab23dde950"
     },
     {
-      "bytes": 2997,
+      "bytes": 3121,
       "mode": "100644",
       "path": "verification/verify-release-output.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "fdf0e323ce685af6f1c075f00b68f1c4cbf9f6e1ccff589de31b38c567eb4529",
-      "source_blob": "b27b36b58be4a41c2c2bcfb145b883c965b70a71"
+      "sha256": "202d19d2ef77c365a9b7bbaadb1be4ce6eecd0820b8145481d5cc331019fd93d",
+      "source_blob": "08b13de24b5c159e4127838d67c2bc92ea8ddd9e"
     },
     {
       "bytes": 9018,
@@ -534,22 +534,22 @@
       "source_blob": "f00dc9945513ef31771835f5f1ba97155aa8a763"
     },
     {
-      "bytes": 24126,
+      "bytes": 32028,
       "mode": "100644",
       "path": "verification/verify_release.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "3670f285a137865140f37fab724a60dca7cedd297e794278b64513ff03baad72",
-      "source_blob": "8e866c065cf4ba4b59b87708015e830c43bcc933"
+      "sha256": "f3785f0904c1c3d3816dc3cad5abc68745a7053028359d0aaa04f42f6153cb76",
+      "source_blob": "78ce734740a9bd353a9d4a03cbfbb93046e221f6"
     },
     {
-      "bytes": 27363,
+      "bytes": 32001,
       "mode": "100644",
       "path": "verification/verify_trust_manifest.py",
       "rewrites": [],
       "role": "verification",
-      "sha256": "34e546058ee95576703f2aed39465b708d74f51862cbef85e6364f871a0eccc3",
-      "source_blob": "0bc144ae36635151da26d75f67109f4a19e9df4a"
+      "sha256": "87abd637d39fe1913143c94da78fd95acd25e20e6842b1761a80239f0bbfb857",
+      "source_blob": "9efe39b974eac9855f59f029cfe2cbfcff1dd6a8"
     }
   ],
   "github": "tavisrudd/clebsch-rigidity",
@@ -567,5 +567,5 @@
   "repository": "clebsch-rigidity",
   "repository_map_sha256": "3837472b201ebe328ee04be49f3a87f4e080d1ca771a5d95081a287017af611c",
   "schema_version": 1,
-  "source_commit": "90f3d7b784ec6654e57111a69030990a53f3c18e"
+  "source_commit": "0b322c1de442248506e46a9b5fc266c4b2c6e50a"
 }

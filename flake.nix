@@ -1,5 +1,5 @@
 {
-  description = "Pinned toolchains for building and verifying the papers";
+  description = "Pinned toolchain for building and verifying the Clebsch rigidity paper";
 
   # One nixpkgs revision for every paper. A manuscript build is byte-reproducible only
   # when both the clock and the toolchain are fixed: pinning SOURCE_DATE_EPOCH alone
@@ -8,9 +8,8 @@
   # rebuilds to different bytes whenever the registry moves, which turns a byte-equality
   # staleness check into a false alarm against a correct tracked PDF.
   #
-  # This file is copied verbatim into each paper, and into each standalone paper
-  # repository by the exporter, so every paper and every mirror builds against the same
-  # revision. Change the revision deliberately: every tracked PDF must then be rebuilt.
+  # The standalone distribution uses this same pin. Change the revision deliberately:
+  # every tracked PDF must then be rebuilt.
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
@@ -20,6 +19,37 @@
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in {
+      apps = forAllSystems (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          verify = pkgs.writeShellApplication {
+            name = "verify-clebsch-rigidity-release";
+            runtimeInputs = with pkgs;
+              [ python3 texlive.combined.scheme-full git coreutils stdenv.cc nix ];
+            text = ''
+              exec python3 verification/verify_release.py "$@"
+            '';
+          };
+          regenerate = pkgs.writeShellApplication {
+            name = "regenerate-clebsch-rigidity-release";
+            runtimeInputs = with pkgs;
+              [ python3 texlive.combined.scheme-full git coreutils stdenv.cc ];
+            text = ''
+              python3 verification/check_manuscript_build.py --update
+              python3 verification/extract_statement_identity.py \
+                --output verification/statement_identity.json
+              exec python3 verification/build_trust_manifest.py "$@"
+            '';
+          };
+        in {
+          default = { type = "app"; program = "${verify}/bin/verify-clebsch-rigidity-release"; };
+          verify = { type = "app"; program = "${verify}/bin/verify-clebsch-rigidity-release"; };
+          regenerate = {
+            type = "app";
+            program = "${regenerate}/bin/regenerate-clebsch-rigidity-release";
+          };
+        });
+
       # A shell per capability set rather than one union shell: Singular and Macaulay2
       # are large closures, and a reader rebuilding a manuscript should not realise a
       # computer algebra system that paper never invokes. Nix builds only the shell
@@ -45,7 +75,7 @@
 
           # Adds poppler-utils, for papers whose checks read the rendered PDF.
           manuscript-pdf = pkgs.mkShell {
-            packages = base ++ [ pkgs.poppler_utils ];
+            packages = base ++ [ pkgs.poppler-utils ];
           };
 
           # Adds sympy to the Python environment.
