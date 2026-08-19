@@ -2,7 +2,7 @@
   "excluded_path_count": 0,
   "excluded_release_outputs": [],
   "excluded_symlinks": [],
-  "exporter_blob": "7bc6af6a40123bfa071466d9ed3faeaafb7e8d60",
+  "exporter_blob": "bc16a3f02957af1342e19dfe7fad78e003d8c5dc",
   "files": [
     {
       "bytes": 108,
@@ -44,7 +44,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "a79a190a7729cc673975005f90e69970c3d290aa56e8864de11801515f10adc5",
+      "sha256": "6dd7ff151a5f24150ae9ec8cc2f730ec60f851a3000160083e7d10614021b2fd",
       "source_blob": null
     },
     {
@@ -165,22 +165,22 @@
       "source_blob": "e6ae20cd4ba49c40470f443b73d3756a35c870be"
     },
     {
-      "bytes": 219796,
+      "bytes": 215639,
       "mode": "100644",
       "path": "clebsch_rigidity.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "39162461d8ba656273feebc98644539b950334b5bec318380d622bfee40d4641",
-      "source_blob": "ffd2a096075dbc626b3591879b99cc0eb38d2a36"
+      "sha256": "0aef23ccaf90845a1cdb21b09f21e97c400e9b64fc913726d682e3b3a07e0b4f",
+      "source_blob": "916dcaa5dbfc8c429b3fbea4294fcc1cc816dabe"
     },
     {
-      "bytes": 102419,
+      "bytes": 102724,
       "mode": "100644",
       "path": "clebsch_rigidity.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "37313976491efedc2139471d70ae4ed09e5fe93d3e84aceb92d2af4e35197dae",
-      "source_blob": "9b706b93fb68bfb8819c86f9b9a71c7f64173340"
+      "sha256": "f3ba8f94114126b4181c4149d849d7bc8692f951a1c98b96b013daa356b32d03",
+      "source_blob": "50a498eeeaa5efb94aeafa3f99c5e338e5d0ced8"
     },
     {
       "bytes": 138651,
@@ -562,10 +562,10 @@
     "clebsch_rigidity",
     "clebsch_rigidity_companion"
   ],
-  "paper_registry_sha256": "ffc21b0a2a999815d4cd30d2416f39cd4b51c578dceb8416e599e4cb3257c553",
+  "paper_registry_sha256": "e3e739fd4bca142a8c245291c1d30125fa468718cc8351c23c2b2fc3c452e84e",
   "release_output_policy": "legacy-unspecified",
   "repository": "clebsch-rigidity",
-  "repository_map_sha256": "2a861f5d01cb01433066950bd72b7bddb397ac5ba0a357dc236b20e9070744db",
+  "repository_map_sha256": "b1287d69c4398954d5ac0d89e29bbd2425c5da957d3e7a6380f638513346803a",
   "schema_version": 1,
-  "source_commit": "20184be6facc3676f4e1c7be472fc79fbacaf6f9"
+  "source_commit": "1142b4bad82d93f1aeca77e1446dc85e0004cc04"
 }
